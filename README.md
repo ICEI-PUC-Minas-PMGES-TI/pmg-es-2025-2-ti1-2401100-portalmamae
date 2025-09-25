@@ -1,20 +1,37 @@
-# Nome do projeto
+# Introdução
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+Informações básicas do projeto.
 
-## Alunos integrantes da equipe
+* **Projeto:** Portal Mamãe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
 
-## Professores responsáveis
+* **Membros da equipe**
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+    * Rafael Galileu Thales Oliveira
+    * Vinícius Matos Oliveira
+    * Emanuelly Oliveira Arruda Cabral
+    * Davi Hermidas Lage Brandão
+    * Bernardo Caetano Rocha de Lima
+    * Victor Gabriel Soares Ananias
+    * Pedro Henrique Dias Pereira
+
+* **Professores responsáveis**
+
+    * Michelle Hanne Soares de Andrade
+    * Lucca Soares de Paiva Lacerda
+    * Daniel Machado Osório Pereira
 
 
+A documentação do projeto é estruturada da seguinte forma:
+
+1. Introdução
+2. Contexto
+3. Product Discovery
+4. Product Design
+5. Metodologia
+6. Solução
+7. Referências Bibliográficas
 
 ## Instruções de utilização 
 
