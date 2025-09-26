@@ -1,12 +1,10 @@
-# Introdução
+# Portal Mamãe
 
-Informações básicas do projeto.
+O atraso no atendimento à saúde pública para gestantes é uma realidade em muitas regiões. Esse atraso pode gerar sérias consequências, como aumento do risco de complicações na gestação, partos de risco e até mortalidade materna e infantil. As causas envolvem desde a dificuldade de acesso a informações e agendamentos até a sobrecarga do sistema de saúde.
 
-* **Projeto:** Portal Mamãe
+A ideia é desenvolver um software especializado no acompanhamento  de gestantes no sistema público de saúde, com o objetivo de reduzir atrasos no atendimento e otimizar o fluxo de informações entre pacientes, unidades de saúde e profissionais.
 
-* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
-
-* **Membros da equipe**
+## Alunos integrantes da equipe
 
     * Rafael Galileu Thales Oliveira
     * Vinícius Matos Oliveira
@@ -16,22 +14,13 @@ Informações básicas do projeto.
     * Victor Gabriel Soares Ananias
     * Pedro Henrique Dias Pereira
 
-* **Professores responsáveis**
+## Professores responsáveis
 
     * Michelle Hanne Soares de Andrade
     * Lucca Soares de Paiva Lacerda
     * Daniel Machado Osório Pereira
 
 
-A documentação do projeto é estruturada da seguinte forma:
-
-1. Introdução
-2. Contexto
-3. Product Discovery
-4. Product Design
-5. Metodologia
-6. Solução
-7. Referências Bibliográficas
 
 ## Instruções de utilização 
 

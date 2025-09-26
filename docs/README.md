@@ -2,13 +2,19 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** Portal Mamãe
+
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
+
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Rafael Galileu Thales Oliveira](https://github.com/RafaelGalileu)
+  * [Vinícius Matos Oliveira](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
+  * [Emanuelly Oliveira Arruda Cabral](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Davi Hermidas Lage Brandão](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
+  * [Bernardo Caetano Rocha de Lima](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
+  * [Victor Gabriel Soares Ananias](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Pedro Henrique Dias Pereira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -24,60 +30,57 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+O pré-natal é uma das etapas mais importantes da saúde pública, crucial para garantir a saúde da gestante e do bebê. No entanto, o sistema público de saúde em muitas regiões enfrenta desafios significativos que levam a atrasos no atendimento, dificultando o acesso e a continuidade do cuidado. Tais atrasos podem gerar consequências graves, como o aumento do risco de complicações na gestação, partos de risco e, tragicamente, mortalidade materna e infantil. As causas variam desde a dificuldade da gestante em obter informações e agendar consultas até a sobrecarga crônica das unidades de saúde.
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O principal problema que o Portal Mamãe busca resolver é a fragmentação e lentidão do acesso ao pré-natal na saúde pública. A dificuldade em agendar a primeira consulta, a necessidade de deslocamento para obter resultados de exames e a falta de um prontuário eletrônico unificado resultam em:
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+  * **Atraso na Detecção de Risco:** A falta de acesso rápido ao histórico e aos resultados de exames pela equipe médica compromete a identificação precoce de gestações de alto risco.
+
+  * **Desperdício de Tempo e Sobrecarga:** Pacientes perdem tempo com deslocamentos desnecessários e os médicos enfrentam burocracia para organizar agendamentos e acessar informações.
+
+  * **Falta de Personalização e Confiança:** A gestante não tem garantia de atendimento em locais próximos ou informações prévias sobre o profissional, afetando a segurança e confiança na consulta.
+
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A finalidade do Portal Mamãe é ser um software especializado no acompanhamento de gestantes no sistema público de saúde.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Nesse contexto, os objetivos específicos são:
+
+  * **Reduzir Atrasos no Atendimento:** Permitir que a gestante agende consultas e exames (como ultrassom) de forma rápida e online, com indicação de unidades de saúde próximas.
+
+  * **Otimizar o Fluxo de Informações:** Criar um Prontuário Eletrônico que centralize resultados de exames e histórico para acesso imediato por gestantes e médicos.
+
+  * **Garantir Atendimento Personalizado e Seguro:** Disponibilizar informações sobre profissionais e condições de saúde prévias, permitindo que o médico ofereça atenção personalizada e melhore a fluidez das operações.
+
+  * **Aumentar a Adesão ao Pré-Natal:** Enviar alertas e lembretes de consultas marcadas para o médico e para a gestante e estabelecer um canal de comunicação direta.
+
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O desenvolvimento do Portal Mamãe é justificado pela necessidade urgente de modernizar o acesso ao pré-natal e mitigar o risco de mortalidade materna e infantil, um grave problema de saúde pública.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Acreditamos que a tecnologia pode quebrar as barreiras de acesso e informação que hoje tornam o acompanhamento das gestantes ineficiente. Ao oferecer um sistema que:
+
+  * **Centraliza a Informação:** Garante que o médico tenha conhecimento prévio da situação geral.
+
+  * **Reduz Burocracia:** Permite que o médico se concentre na qualidade e na segurança do atendimento.
+
+  * **Empodera a Paciente:** Oferece praticidade para agendar e ver resultados de exames rapidamente.
+
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O Portal Mamãe é voltado principalmente para dois públicos essenciais dentro do sistema de saúde pública:
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva o mercado para o qual a solução está sendo desenvolvida, detalhando um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc. Adicione informações sobre o público-alvo por meio de uma descrição textual ou por meio do mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+  1. **As Gestantes (Usuárias Finais):** Este é o público mais abrangente, buscando facilidade no acesso a informações, agendamentos práticos e a segurança de ter seu histórico de saúde acessível. Elas utilizarão o sistema para agendar consultas, receber resultados e se comunicar com a equipe.
+
+  2. **Os Profissionais de Saúde (Médicos, Enfermeiros, Unidades de Saúde):** Inclui médicos obstetras e outros profissionais envolvidos no pré-natal. Eles utilizarão a plataforma para visualizar e organizar agendamentos, acessar prontuários e exames anteriores, e gerenciar a comunicação com as pacientes para um atendimento mais humanizado e eficiente.
+
+Ambos os grupos se beneficiam, pois o sistema promove uma comunicação clara, otimiza o fluxo de trabalho do profissional e, o mais importante, eleva a qualidade e a segurança do atendimento prestado à gestante.
+
 
 # Product Discovery
 
