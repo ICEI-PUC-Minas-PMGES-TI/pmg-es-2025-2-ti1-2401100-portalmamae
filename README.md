@@ -6,19 +6,19 @@ A ideia é desenvolver um software especializado no acompanhamento  de gestantes
 
 ## Alunos integrantes da equipe
 
-    * Rafael Galileu Thales Oliveira
-    * Vinícius Matos Oliveira
-    * Emanuelly Oliveira Arruda Cabral
-    * Davi Hermidas Lage Brandão
-    * Bernardo Caetano Rocha de Lima
-    * Victor Gabriel Soares Ananias
-    * Pedro Henrique Dias Pereira
+* Rafael Galileu Thales Oliveira
+* Vinícius Matos Oliveira
+* Emanuelly Oliveira Arruda Cabral
+* Davi Hermidas Lage Brandão
+* Bernardo Caetano Rocha de Lima
+* Victor Gabriel Soares Ananias
+* Pedro Henrique Dias Pereira
 
 ## Professores responsáveis
 
-    * Michelle Hanne Soares de Andrade
-    * Lucca Soares de Paiva Lacerda
-    * Daniel Machado Osório Pereira
+* Michelle Hanne Soares de Andrade
+* Lucca Soares de Paiva Lacerda
+* Daniel Machado Osório Pereira
 
 
 

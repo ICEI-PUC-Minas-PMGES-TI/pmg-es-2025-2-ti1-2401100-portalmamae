@@ -86,35 +86,45 @@ Ambos os grupos se beneficiam, pois o sistema promove uma comunicação clara, o
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+Nessa etapa, vamos trabalhar com a metodologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+* **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
+
+![MatrizCSD](/docs/images/MatrizCSD.png)
+
+* **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema;
+
+![MapaStakeholders](/docs/images/MapaStakeholders.png)
+
+* **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
+
+![Entrevistas qualitativas](/docs/images/EntrevistaQualitativa.png)
+
+* **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+
+![Highlights de Pesquisa](/docs/images/HighlightsDePesquisa.png)
+
 
 ## Etapa de Definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+| Persona 1 | Persona 2 |
+|---------- | -------- |
+| ![Persona1](/docs/images/Persona1.png) | ![Persona2](/docs/images/Persona2.png) |
 
-![Exemplo de proposta de valor](images/exemplo-persona.png)
+| Persona 3 | Persona 4 |
+|---------- | -------- |
+| ![Persona3](/docs/images/Persona3.png) | ![Persona4](/docs/images/Persona4.png) |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+| Persona 5 | Persona 6 |
+|---------- | -------- |
+| ![Persona5](/docs/images/Persona5.png) | ![Persona6](/docs/images/Persona6.png) |
+
+| Persona 7 | 
+|---------- |
+| ![Persona7](/docs/images/Persona7.png) |
+
 
 # Product Design
 
@@ -126,29 +136,48 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 | EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
 | --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão das necessidades de cada persona. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| Usuário: Gestante   | Agendar consultas presenciais sem sair de casa.  | Não preciso me deslocar e é mais prático.             |
+| Usuário: Gestante         | Receber resultados de exames online.       | Não preciso me deslocar e tenho acesso aos resultados, mais rápido. |
+| Usuário: Gestante   | atendimento em locais próximos a mim.  | Otimizar tempo da consulta.             |
+| Usuário: Gestante   | Ter conhecimento e escolha do médico(a) que irá me atender.   | Segurança e confiança na consulta.             |
+| Usuário: Gestante   | atendimento em locais próximos a mim.  | Otimizar tempo da consulta.             |
+| Usuário: Gestante   | Marcar meu exame de ultrassom rapidamente.  | Preciso avaliar a posição do meu bebê antes do parto.           |
+| Usuário: Médico obstetra   | Atenção personalizada no atendimento.   | Qualidade e segurança no atendimento.            |
+|Usuário: Médico obstetra|Acessar uma plataforma simples para organizar agendamentos.|Reduzir burocracia e evitar sobrecarga de pacientes.|
+|Usuário: Médico obstetra|Receber alertas de consultas e ter comunicação rápida com as pacientes.|Garantir atendimento eficiente e humanizado.|
+|Usuário: Médico obstetra|Ter acesso fácil a informações prévias de saúde e preferências.|Melhorar a fluidez e a segurança do atendimento.|
+|Usuário: Médico obstetra|Visualizar o histórico de exames anteriores das pacientes.|Ter conhecimento prévio e acelerar o atendimento.|
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+##### Proposta de valor para Persona William
 
-##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
+![Proposta de valor 1](/docs/images/Proposta1.png)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+##### Proposta de valor para Persona Rayssa 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![Proposta de valor 2](/docs/images/Proposta2.png)
+
+##### Proposta de valor para Persona Ricardo 
+
+![Proposta de valor 3](/docs/images/Proposta3.png)
+
+##### Proposta de valor para Persona Adriana
+
+![Proposta de valor 4](/docs/images/Proposta4.png)
+
+##### Proposta de valor para Persona Ana Cláudia
+
+![Proposta de valor 5](/docs/images/Proposta5.png)
+
+##### Proposta de valor para Persona Ana Oliveira
+
+![Proposta de valor 6](/docs/images/Proposta6.png)
+
+##### Proposta de valor para Persona Rafael Martins
+
+![Proposta de valor 7](/docs/images/Proposta7.png)
+
 
 ## Requisitos
 
@@ -158,31 +187,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-
+| RF-001 | O sistema deve mostrar horários e profissionais disponíveis para agendar consultas.  | ALTA       |
+| RF-002 | O sistema deve mostrar resultados de exames. | ALTA     |
+| RF-003 | O sistema deve mostrar locais de atendimento próximos ao usuário. | ALTA     |
+| RF-004 | O sistema deve permitir que o médico acesse os exames anteriores da paciente. | MÉDIA     |
+| RF-005 | O sistema deve permitir que o médico visualize e organize os agendamentos das suas pacientes. | MÉDIA     |
+| RF-006 | O sistema deve enviar alertas sobre consultas marcadas para o médico e a gestante.  | BAIXA     |
+| RF-007 | O sistema deve ter um canal de comunicação para a gestante e o médico.  | BAIXA     |
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| RNF-001 | O sistema deverá estar disponível 7 dias por semana, 24 horas por dia. | ALTA     |
+| RNF-002 | O desenvolvimento deverá usar HTML, CSS e Javascript.          | BAIXA      |
+| RNF-003 | O site deve ser publicado em um ambiente acessível publicamente na internet.  | ALTA     |
+| RNF-004 | O site não deverá ter nenhum custo para os usuários.         | ALTA      |
+| RNF-005 | O sistema deve possuir um login com usuário e senha para cada usuário. | ALTA     |
+| RNF-006 | O sistema deve ser seguro e proteger a privacidade dos dados das gestantes.          | ALTA      |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Projeto de Interface
 
@@ -247,8 +269,8 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVJSvRF1c=/    |
+| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git  |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
 |                             |            |                                                    |
