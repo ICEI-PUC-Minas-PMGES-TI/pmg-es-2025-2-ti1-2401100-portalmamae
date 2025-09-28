@@ -9,8 +9,8 @@ Informações básicas do projeto.
 * **Membros da equipe:**
 
   * [Rafael Galileu Thales Oliveira](https://github.com/RafaelGalileu)
-  * [Vinícius Matos Oliveira](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Emanuelly Oliveira Arruda Cabral](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Vinícius Matos Oliveira](https://github.com/vnmatos)
+  * [Emanuelly Oliveira Arruda Cabral](https://github.com/Manu-Olliver)
   * [Davi Hermidas Lage Brandão](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
   * [Bernardo Caetano Rocha de Lima](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
   * [Victor Gabriel Soares Ananias](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
@@ -26,7 +26,7 @@ A documentação do projeto é estruturada da seguinte forma:
 6. Solução
 7. Referências Bibliográficas
 
-✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
+✅ [Documentação de Design Thinking (MIRO)](/docs/files/DocumentaçãodeDesignThinking.pdf)
 
 # Contexto
 
@@ -210,28 +210,107 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
 
-### Wireframes
+### Protótipos de Tela
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+##### Home-Page
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+Tela inicial do sistema. Apresentação da plataforma com seções para conferir Unidades próximas, informações sobre Saúde da gestação, Alimentação e Vacinação
 
-Descrição para a tela XPTO
+![Home-Page](/docs/images/HomePage0001.jpg)
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+##### Tela de Login (Gestante)
+
+Tela de acesso para a gestante.
+
+![Tela de Login (Gestante)](/docs/images/TeladeLogin(Gestante).jpg)
+
+
+##### Tela de Login (Prestador de Serviço)
+
+Tela de acesso para o Prestador de Serviços.
+
+![Tela de Login (Prestador de Serviço)](/docs/images/TeladeLogin(PrestadordeServiço).jpg)
+
+
+##### Tela de Cadastro (Gestante)
+
+Formulário para cadastro inicial da gestante.
+
+![Tela de Cadastro (Gestante)](/docs/images/TeladeCadastro(Gestante).jpg)
+
+
+##### Portal da Gestante (Perfil)
+
+Tela de informações do perfil da gestante.
+
+![Portal da Gestante (Perfil)](/docs/images/PortaldaGestante(Perfil).jpg)
+
+
+##### Tela de Busca de Serviços/Profissional
+
+Formulário para encontrar serviços ou médicos. Permite filtrar por localização, Tipo de Serviço e Especialidade.
+
+![Tela de Busca de Serviços/Profissional](/docs/images/TeladeBuscadeServiçosProfissional.jpg)
+
+
+##### Portal do Prestador de Serviços (Perfil)
+
+Tela de perfil e acesso para o Prestador de Serviços.    
+
+![Portal do Prestador de Serviços (Perfil)](/docs/images/PortaldoPrestador(Perfil).jpg)
+
+
+##### Tela de Informações Médicas e Resultados de Exames
+
+Tela de prontuário da gestante. Mostra o Quadro médico e Resultados de exames com links para download de arquivos
+
+![Tela de Informações Médicas e Resultados de Exames](/docs/images/TeladeInformaçõesMédicaseResultadosdeExames.jpg)
+
+
+##### Tela de Consultas e Exames Agendados para a Gestante
+
+Exibe a lista de Consultas e Exames agendados junto com um calendário com os dias marcados. Possui um botão "AGENDE AQUI!" para marcar novos compromissos.
+
+![Tela de Consultas e Exames Agendados para a Gestante](/docs/images/TeladeConsultaseExamesAgendadosparaaGestante.jpg)
+
+
+##### Agenda do prestador de serviço
+
+Agenda do Prestador de Serviço. Exibe a lista de consultas e/ou procedimentos agendados de seus pacientes,  junto com um calendário com os dias marcados.
+
+![Agenda do prestador de serviço](/docs/images/AgendadoPrestadordeServiço.jpg)
+
+
+##### Busca de Prontuários
+
+Tela de acesso exclusiva do prestador de serviços para localizar prontuários de pacientes.
+
+![Busca de Prontuários](/docs/images/BuscadeProntuários.jpg)
+
+
+##### Duvidas e Curiosidades (Gestação)
+
+Conteúdo informativo detalhado sobre a gravidez, dividido por trimestres.
+
+![Duvidas e Curiosidades (Gestação)](/docs/images/DuvidaseCuriosidades(Gestação).jpg)
+
+
+##### Duvidas e Curiosidades (Alimentação)
+
+Conteúdo informativo sobre nutrição na gravidez
+
+![Duvidas e Curiosidades (Alimentação)](/docs/images/DuvidaseCuriosidades(Alimentação).jpg)
+
+
+##### Tela do Calendário Nacional de Vacinação
+
+Conteúdo informativo sobre o Calendário Nacional de Vacinação. Apresenta a tabela de vacinas essenciais para a gestante e o bebê, separadas por faixa etária
+
+![Tela do Calendário Nacional de Vacinação](/docs/images/TeladoCalendárioNacionaldeVacinação.jpg)
+
 
 ### User Flow
 
