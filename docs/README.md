@@ -1,5 +1,5 @@
 # Introdução
-
+.
 Informações básicas do projeto.
 
 * **Projeto:** Portal Mamãe
