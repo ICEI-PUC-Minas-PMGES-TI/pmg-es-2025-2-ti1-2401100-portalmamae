@@ -11,7 +11,7 @@ Informações básicas do projeto.
   * [Rafael Galileu Thales Oliveira](https://github.com/RafaelGalileu)
   * [Vinícius Matos Oliveira](https://github.com/vnmatos)
   * [Emanuelly Oliveira Arruda Cabral](https://github.com/Manu-Olliver)
-  * [Davi Hermidas Lage Brandão](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
+  * [Davi Hermidas Lage Brandão](https://github.com/hermidas-wadac)
   * [Bernardo Caetano Rocha de Lima](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
   * [Victor Gabriel Soares Ananias](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
   * [Pedro Henrique Dias Pereira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
@@ -194,6 +194,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-005 | O sistema deve permitir que o médico visualize e organize os agendamentos das suas pacientes. | MÉDIA     |
 | RF-006 | O sistema deve enviar alertas sobre consultas marcadas para o médico e a gestante.  | BAIXA     |
 | RF-007 | O sistema deve ter um canal de comunicação para a gestante e o médico.  | BAIXA     |
+| RF-008 | O sistema deve mostrar os cuidados que a gestante precisa antes, durante e após a gestação.  | MÉDIA     |
+| RF-009 | O sistema deve conter páginas para informar a gestante sobre os procesos de gestação.   | BAIXA     |
+
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
@@ -265,9 +268,16 @@ Tela de perfil e acesso para o Prestador de Serviços.
 
 ##### Tela de Informações Médicas e Resultados de Exames
 
-Tela de prontuário da gestante. Mostra o Quadro médico e Resultados de exames com links para download de arquivos
+Mostra o Quadro médico e Resultados de exames com links para download de arquivos
 
 ![Tela de Informações Médicas e Resultados de Exames](/docs/images/TeladeInformaçõesMédicaseResultadosdeExames.jpg)
+
+
+##### Prontuário e Informações
+
+Tela de preenchimento e visualização do prontuário médico detalhado do paciente.
+
+![Prontuário e Informações](/docs/images/ProntuárioeInformação.jpg)
 
 
 ##### Tela de Consultas e Exames Agendados para a Gestante
@@ -314,29 +324,13 @@ Conteúdo informativo sobre o Calendário Nacional de Vacinação. Apresenta a t
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
+[User Flow](/docs/files/UserFlow.pdf)
 
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 ### Protótipo Interativo
 
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
+✅ [Protótipo Interativo (Figma)](https://www.figma.com/proto/9wZgUTGYPeOOI9tLe7QeH7/Untitled?node-id=0-1&t=QuG27JWyXK3J16Hv-1)
 
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
 
 # Metodologia
 
@@ -351,7 +345,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVJSvRF1c=/    |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git  |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Protótipo Interativo | Figma  | https://www.figma.com/proto/9wZgUTGYPeOOI9tLe7QeH7/Untitled?node-id=0-1&t=QuG27JWyXK3J16Hv-1   |
 |                             |            |                                                    |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
