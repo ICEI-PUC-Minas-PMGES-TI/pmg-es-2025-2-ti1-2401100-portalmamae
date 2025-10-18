@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Mamãe</title>
+        <link rel="stylesheet" href="/codigo/public/assets/css/base.css">
+        <link rel="stylesheet" href="/codigo/Davi Hermidas/davi-style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!--Codigo Para o Cabeçalho-->
+            <header>
+                <h1>Portal Mamãe</h1>
+            </header>
+
+            <main>
+                <!--Formulário de agendamento-->
+                <form id="formMamae" class="formulario">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" name="uf" placeholder="Digite o Estado" required>
+                    
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+
+                    <label for="serviço">Escolha o tipo de serviço</label>
+                    <input type="text" id="serviço" name="serviço" placeholder="Ex: consulta, exame..." required>
+
+                    <label for="especialidade">Escolha a Especialidade</label>
+                    <input type="text" id="especialidade" name="especialidade" placeholder="Ex: obstetra, pediatra..." required>
+                    
+                    <p>Já possui médico para acompanhamento?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="acompanhamento" value="Sim" required>Sim</label>
+                        <label><input type="radio" name="acompanhamento" value="Não" required>Não</label>
+                    </div>
+
+                    <button type="submit">Concluir</button>
+                </form>
+                
+            </main>
+        </div>
+    </body>
+</html>
