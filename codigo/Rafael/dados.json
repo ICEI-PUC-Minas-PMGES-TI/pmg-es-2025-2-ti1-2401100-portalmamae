@@ -1,0 +1,30 @@
+{
+    "gestante_id": "G00012",
+    "nome_completo": "Rayssa Sthefany dos Santos",
+    "idade": 28,
+    "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+    },
+    "resultado_exames": [
+        {
+            "id_exame": "E001",
+            "nome_exame": "Hemograma",
+            "data_exame": "07-10-2025",
+            "status": "Finalizado",
+            "arquivo_url": "www.portalmamae.com.br/arquivos/hemograma_07102025.pdf"
+        },
+        {
+            "id_exame": "E002",
+            "nome_exame": "Ultrassonografia",
+            "data_exame": "11-10-2025",
+            "status": "Finalizado",
+            "arquivo_url": "www.portalmamae.com.br/arquivos/Ultrassonografia_11102025.pdf"
+        }
+    ]
+}

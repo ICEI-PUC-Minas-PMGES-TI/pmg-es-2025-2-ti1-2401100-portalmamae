@@ -37,6 +37,18 @@ h2{
     padding: 0 60px;
     
 }
+
+h3{
+    padding: 10px 32px;
+    font-weight: normal;
+    font-size: 20px;
+    
+}
 ul{
     padding: 10px 0 100px 80px;
+}
+li{
+    margin: 20px;
+    
+    font-size: 18px;
 }
