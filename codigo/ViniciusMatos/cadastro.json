@@ -1,0 +1,22 @@
+{
+  "dadosUsuario": [
+    {
+      "id": 1,
+      "nome_completo": "Carla Diniz",
+      "data_nascimento": "12/08/2002",
+      "cpf": "123.099.234.98",
+      "email": "carla234@gmail.com",
+      "telefone": "(31) 91829-1283",
+      "senha": "299340"
+    }
+  ],
+  "quadro_gestante": {
+    "portador_doencas_transmissiveis": false,
+    "possui_diabetes": false,
+    "toma_remedio_controlado": false,
+    "em_tratamento": false,
+    "alergia_a_medicamentos": true,
+    "alergia_detalhe": "Dipirona",
+    "possui_doenca_ou_sindrome": false
+  }
+}

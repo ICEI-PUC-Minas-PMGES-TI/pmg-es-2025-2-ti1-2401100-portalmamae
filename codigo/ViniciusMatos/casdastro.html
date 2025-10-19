@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casdastro.css">
+    <title>Cadastro Portal-Mamãe</title>
+</head>
+<body>
+    <header>
+        <h1>Portal Mamãe</h1>
+        <a href="#" class="home-link">Home</a>
+    </header>
+
+    <div class="container">
+        <form id="cadastroForm">
+             <!--Onde o usuario preenche com seus próprios dados (nome,data de nascimento, CPF, email, telefone e senha)-->
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataNascimento">Data de nascimento</label>
+                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Ex: 000.000.000-00" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Ex: (00) 00000-0000">
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmaSenha">Confirme sua senha</label>
+                <input type="password" id="confirmaSenha" name="confirmaSenha" required>
+            </div>
+
+            <!--Aqui vem a area onde o usuário seleciona entre sim e não, após preencher seus dados (ao marcar sim preenche o campo de texto)-->
+
+            <div class="form-group">
+                <label>Possui doenças transmissíveis? Se sim, qual?</label>
+                <div class="radio-container" data-target-input="doencasTransmissiveisQual">
+                    <div class="radio-option">
+                        <input type="radio" id="dtSim" name="doencasTransmissiveis" value="Sim">
+                        <label for="dtSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="dtNao" name="doencasTransmissiveis" value="Não" checked>
+                        <label for="dtNao">Não</label>
+                    </div>
+                    <input type="text" id="doencasTransmissiveisQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Possui diabetes? Se sim, qual?</label>
+                <div class="radio-container" data-target-input="diabetesQual">
+                    <div class="radio-option">
+                        <input type="radio" id="dbSim" name="diabetes" value="Sim">
+                        <label for="dbSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="dbNao" name="diabetes" value="Não" checked>
+                        <label for="dbNao">Não</label>
+                    </div>
+                    <input type="text" id="diabetesQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Possui alergia a medicamentos? Se sim, qual?</label>
+                <div class="radio-container" data-target-input="alergiaQual">
+                    <div class="radio-option">
+                        <input type="radio" id="amSim" name="alergiaMedicamentos" value="Sim">
+                        <label for="amSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="amNao" name="alergiaMedicamentos" value="Não" checked>
+                        <label for="amNao">Não</label>
+                    </div>
+                    <input type="text" id="alergiaQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Possui alguma doença ou síndrome? Se sim, qual?</label>
+                <div class="radio-container" data-target-input="doencaSindromequQual">
+                    <div class="radio-option">
+                        <input type="radio" id="dsSim" name="doencaSindromequ" value="Sim">
+                        <label for="dsSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="dsNao" name="doencaSindromequ" value="Não" checked>
+                        <label for="dsNao">Não</label>
+                    </div>
+                    <input type="text" id="doencaSindromequQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Toma algum remédio controlado?</label>
+                <div class="radio-container" data-target-input="remedioControladoQual">
+                    <div class="radio-option">
+                        <input type="radio" id="rcSim" name="remedioControlado" value="Sim">
+                        <label for="rcSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="rcNao" name="remedioControlado" value="Não" checked>
+                        <label for="rcNao">Não</label>
+                    </div>
+                    <input type="text" id="remedioControladoQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Atualmente está realizando algum tratamento?</label>
+                <div class="radio-container" data-target-input="tratamentoAtualQual">
+                    <div class="radio-option">
+                        <input type="radio" id="taSim" name="tratamentoAtual" value="Sim">
+                        <label for="taSim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="taNao" name="tratamentoAtual" value="Não" checked>
+                        <label for="taNao">Não</label>
+                    </div>
+                    <input type="text" id="tratamentoAtualQual" class="radio-input-field" placeholder="Qual?">
+                </div>
+            </div>
+            
+            <button type="submit" class="button-concluir">Concluir</button>
+        </form>
+    </div>
+
+    <footer>
+        www.portalmamae.com.br © 2025
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
