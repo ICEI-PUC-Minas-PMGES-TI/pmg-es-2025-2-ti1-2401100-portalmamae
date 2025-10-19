@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  background-color: #f49b9b;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #000;
+}
+
+header nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.info {
+  width: 35%;
+}
+
+.legenda {
+  margin-bottom: 20px;
+}
+
+.legenda p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.consulta {
+  background-color: #d3d3d3;
+}
+
+.exame {
+  background-color: #f7a9b8;
+}
+
+.appointment {
+  margin-bottom: 20px;
+}
+
+.appointment h3 {
+  color: #009933;
+  margin-bottom: 5px;
+}
+
+.agendar {
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.agendar:hover {
+  background-color: #004d00;
+}
+
+.note {
+  margin-top: 10px;
+  color: #006400;
+  font-size: 0.9em;
+}
+
+.calendario {
+  background-color: #d47a7a;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.calendario h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+}
+
+.consulta-dia {
+  background-color: #d3d3d3;
+  border-radius: 50%;
+}
+
+.exame-dia {
+  background-color: #f7a9b8;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  background-color: #f49b9b;
+  padding: 15px;
+  font-size: 0.9em;
+}

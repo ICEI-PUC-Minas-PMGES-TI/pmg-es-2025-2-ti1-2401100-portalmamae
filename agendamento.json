@@ -1,0 +1,34 @@
+{
+  "titulo": "Consultas e Exames",
+  "legenda": {
+    "consultas": "#gray",
+    "exames": "#pink"
+  },
+  "eventos": [
+    {
+      "tipo": "Consulta",
+      "data": "2025-09-04",
+      "hora": "13:00",
+      "local": {
+        "nome": "Hospital de BH",
+        "endereco": "Rua alguma coisa, 0000, BH",
+        "cep": "00000-000"
+      }
+    },
+    {
+      "tipo": "Exame",
+      "data": "2025-09-15",
+      "hora": "14:00",
+      "local": {
+        "nome": "Hospital de BH",
+        "endereco": "Rua alguma coisa, 0000, BH",
+        "cep": "00000-000"
+      }
+    }
+  ],
+  "configuracoes": {
+    "nota": "O tempo de tolerância para atrasos é de 10 min.",
+    "botaoTexto": "AGENDE AQUI!",
+    "mesAtual": "Setembro de 2025"
+  }
+}
