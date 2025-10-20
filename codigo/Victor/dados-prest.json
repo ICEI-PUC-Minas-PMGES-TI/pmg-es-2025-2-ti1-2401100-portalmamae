@@ -1,0 +1,11 @@
+{
+  "dados_prestadores": [
+    {
+      "id": 1,
+      "nome_prestador": "Eduard Jaime Ambrosio",
+      "num_registro": "000000000000000",
+      "email": "edujaimes@gmail.com",
+      "telefone": "(31) 9999-1111"
+    }
+  ]
+}
