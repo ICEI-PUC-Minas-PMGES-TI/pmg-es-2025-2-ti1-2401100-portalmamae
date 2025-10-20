@@ -33,8 +33,10 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
+    gap: 20px; /* espaço entre formulário e imagem */
 }
 
+/* Formulário */
 .formulario {
     width: 45%;
     display: flex;
@@ -51,12 +53,14 @@ main {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%; /* garante largura total do container */
 }
 
 .opcoes {
     display: flex;
     gap: 20px;
     color: #1a531f;
+    flex-wrap: wrap; /* evita overflow em telas pequenas */
 }
 
 button {
@@ -67,12 +71,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    width: fit-content; /* botão não fica esticado */
 }
 
 button:hover {
     background-color: #1b4332;
 }
 
+/* Imagem */
 .imagem {
     width: 45%;
     display: flex;
@@ -84,10 +90,56 @@ button:hover {
     height: auto;
 }
 
+/* Rodapé */
 footer {
     background-color: #f7a7a7;
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
     color: #333;
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
+
+/* Tablets e telas médias */
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .formulario,
+    .imagem {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .opcoes {
+        gap: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .formulario input[type="text"] {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* botão ocupa largura total em mobile */
+    }
+
+    .opcoes {
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }
