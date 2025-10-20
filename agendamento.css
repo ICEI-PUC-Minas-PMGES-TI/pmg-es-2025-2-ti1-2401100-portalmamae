@@ -1,5 +1,15 @@
-* {
+html, body {
+  height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; 
+  min-height: 0;
+}
+ * { margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -15,10 +25,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header h1 {
   color: #000;
+  font-size: 1.8em;
+}
+
+header nav {
+  margin-top: 10px;
 }
 
 header nav a {
@@ -27,17 +43,16 @@ header nav a {
   margin-left: 25px;
   font-weight: bold;
 }
-
 main {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 30px;
-  background-color: #fff;
+  padding: 30px 0;
 }
-
 .info {
-  width: 35%;
+  width: 40%;
 }
 
 .legenda {
@@ -100,6 +115,7 @@ main {
   padding: 20px;
   border-radius: 5px;
   color: white;
+  width: 70%;
 }
 
 .calendario h2 {
@@ -130,6 +146,39 @@ th, td {
 footer {
   text-align: center;
   background-color: #f49b9b;
-  padding: 15px;
+  padding: 70px;
   font-size: 0.9em;
+}
+
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .info,
+  .calendario {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    margin-top: 15px;
+  }
+
+  .agendar {
+    display: block;
+    margin: 20px auto;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+
 }
