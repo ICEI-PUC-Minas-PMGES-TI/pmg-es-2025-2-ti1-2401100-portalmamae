@@ -1,0 +1,20 @@
+{
+  "dados_prestadores": [
+    {
+      "id": "1",
+      "nome_prestador": "Eduard Jaime Ambrosio",
+      "num_registro": "000000000000000",
+      "email": "edujaimes@gmail.com",
+      "telefone": "(31) 9999-1111)",
+      "endereco_atendimento": "Rua da Consulta, 123 - Bairro Saúde, Belo Horizonte - MG"
+    },
+    {
+      "id": "2",
+      "nome_prestador": "Dra. Ana Beatriz Silva",
+      "num_registro": "111111111111111",
+      "email": "anabeatriz@portalmamae.com.br",
+      "telefone": "(21) 9 8888-2222",
+      "endereco_atendimento": "Av. das Américas, 500 - Sala 301, Rio de Janeiro - RJ"
+    }
+  ]
+}

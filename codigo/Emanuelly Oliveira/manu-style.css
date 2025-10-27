@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+/*cores retiradas do figma*/
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FEA1A3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /*link de pagina*/
+header a{ 
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    }
+
+    /*texto cabeçalho*/
+header h1 {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.perfil {
+  width: 45%;
+}
+
+.foto {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foto img {
+    width: 120px; /* Tamanho reduzido */
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    background-color: white;
+    padding: 5px;
+    object-fit: cover;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #1a6e25;
+  margin-top: 15px;
+}
+    /*formulario*/
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.atendimento {
+  width: 45%;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.atendimento h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.atendimento strong {
+  color: #1a6e25;
+}
+
+#links {
+  margin-top: 20px;
+}
+
+#links a {
+  display: block;
+  color: #187605;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #FEA1A3;
+  padding: 15px;
+  font-size: 0.9em;
+}
