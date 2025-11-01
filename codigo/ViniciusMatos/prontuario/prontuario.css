@@ -1,0 +1,251 @@
+/* Configurações básicas e reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Cabeçalho e Rodapé (Barras Azuis Claras) --- */
+.header-bar, .footer-bar {
+    background-color: #e0f7fa; /* Azul claro do protótipo */
+    color: #000;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.portal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.footer-bar {
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-top: auto; /* Garante que o rodapé fique no final */
+}
+
+/* --- Conteúdo Principal --- */
+.content {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 600px;
+    flex-wrap: wrap; /* Para a responsividade */
+}
+
+/* --- Lado Esquerdo: Formulário --- */
+.prontuario-form-container {
+    flex: 2; /* Ocupa mais espaço */
+    padding: 40px;
+    border-radius: 8px 0 0 8px;
+    background-color: #f8f8f8; /* Cor de fundo do formulário no protótipo */
+    min-width: 300px; /* Garante que não fique muito estreito */
+}
+
+.prontuario-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* --- Estilo Clean, Arredondado e Maior para Campos de Texto --- */
+input[type="text"], textarea {
+    /* Tornando a caixa maior e clean: */
+    padding: 12px; /* Aumenta o padding interno (de 10px para 12px) */
+    border: 1px solid #ddd; /* Borda mais suave e clean (de #ccc para #ddd) */
+    border-radius: 8px; /* Mais arredondado (de 5px para 8px) */
+    font-size: 1rem;
+    width: 100%;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #b0c4de; /* Destaca a borda ao focar */
+    box-shadow: 0 0 0 3px rgba(176, 196, 222, 0.5); /* Adiciona um brilho suave */
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* Ajusta o tamanho das textareas grandes */
+#motivo {
+    min-height: 80px;
+}
+#historia {
+    min-height: 120px;
+}
+#exames {
+    min-height: 100px;
+}
+#diagnostico {
+    min-height: 80px;
+}
+/* ----------------------------------------------------------------- */
+
+
+/* --- Lado Direito: Info Prontuário e Ícone --- */
+.prontuario-info {
+    flex: 1; /* Ocupa menos espaço que o form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    min-width: 250px;
+}
+
+.prontuario-info h2 {
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.agenda-link {
+    color: #4CAF50; /* Verde */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* --- Estilização do Ícone (replicando o visual do protótipo) --- */
+.icon-container {
+    position: relative;
+    width: 150px; /* Tamanho base */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-file {
+    font-size: 100px;
+    color: #333; /* Cor do prontuário */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon-search {
+    font-size: 70px;
+    color: #333; /* Cor da lupa */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotate(45deg); /* Gira a lupa */
+    z-index: 1;
+}
+
+.icon-check {
+    font-size: 30px;
+    color: #4CAF50; /* Cor do check (verde) */
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 2;
+}
+
+/* --- Responsividade (Media Query) --- */
+@media (max-width: 850px) {
+    .content {
+        flex-direction: column; /* Coloca o formulário e a info em colunas */
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .prontuario-form-container {
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .prontuario-info {
+        order: -1; /* Move o bloco de info para cima no layout mobile */
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .prontuario-info h2 {
+        font-size: 2rem;
+    }
+
+    .icon-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .icon-file {
+        font-size: 70px;
+    }
+
+    .icon-search {
+        font-size: 50px;
+    }
+
+    .icon-check {
+        font-size: 20px;
+    }
+}
+/* style.css (Adicione ao final do arquivo) */
+
+/* Estilo para o Botão Salvar */
+#btn-salvar {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btn-salvar:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para feedback visual de erro */
+.input-error {
+    border: 2px solid #e53935 !important; /* Borda vermelha para campo inválido */
+    box-shadow: 0 0 5px rgba(229, 57, 53, 0.5);
+}
+
+.error-message {
+    color: #e53935;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
