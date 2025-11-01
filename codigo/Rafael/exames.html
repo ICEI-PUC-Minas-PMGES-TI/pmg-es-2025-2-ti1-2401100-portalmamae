@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/codigo/public/assets/css/base.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Informações médicas e resultados de exames</h1>
@@ -18,10 +20,10 @@
     </header>
     <main>
         <section class="ladoEsquerdo">
-            
+
             <article class="perfil">
-            <img class="fotoPerfil" src="images/icon_perfil.png" alt="Foto Perfil">
-            <h3 id="nomeCompleto">Nome Completo</h3>
+                <img class="fotoPerfil" src="images/icon_perfil.png" alt="Foto Perfil">
+                <h3 id="nomeCompleto">Nome Completo</h3>
             </article>
 
             <article class="quadroMedico">
@@ -41,11 +43,17 @@
         <section class="ladoDireito">
 
             <div class="iconArquivo">
-            <img src="images/icon_arquivo.png" alt="arquivos">
+                <img src="images/icon_arquivo.png" alt="arquivos">
             </div>
 
             <article class="resultadoExame">
-                <h2>Resultado de Exames</h2>
+
+                <div id="resul">
+                    <h2>Resultado de Exames</h2>
+                    <!--Botão provisório para gerar resultados de exames-->
+                    <button id="btmResultados">Gerar Resultados</button>
+                </div>
+
                 <ul class="exames">
                     <li></li>
                     <li></li>

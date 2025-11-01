@@ -9,6 +9,7 @@ main{
 .ladoDireito{
     width: 50%; 
 }
+
 /*Posiciona as imagens*/
 .perfil{
     display: flex;
@@ -32,6 +33,7 @@ main{
     width: 150px;
     margin: 40px 0 60px 0;
 }
+/*---------------------------*/
 
 h2{
     padding: 0 60px;
@@ -51,4 +53,8 @@ li{
     margin: 20px;
     
     font-size: 18px;
+}
+/*Provisório para gerar resultados via backend*/
+#resul{
+    display: flex;
 }
