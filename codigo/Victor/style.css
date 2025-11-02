@@ -26,11 +26,13 @@ a {
     align-items: initial;
 }
 
-.header {
-    background-color: #c8f0f0;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    z-index: 10;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A4E9F0;
+    padding: 20px;
+    font-family: Helvetica, sans-serif;
 }
 
 .header .container {
@@ -158,7 +160,7 @@ a {
 }
 
 .footer {
-    background-color: #c8f0f0;
+    background-color: #A4E9F0;
     text-align: center;
     padding: 25px 0;
     font-weight: 500;
