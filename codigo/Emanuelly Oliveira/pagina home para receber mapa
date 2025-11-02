@@ -43,7 +43,7 @@
             </section>
 
                 <!-- Google Maps API -->
-                <script async src=" "></script>
+                 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzOr03JOdz5dioxkEh5y7e85fStOxzYk&callback=initMap"></script>
                 <script src="home.js"></script>
     </body>
 
@@ -66,9 +66,18 @@
         linksContainer.appendChild(a);
     });
 
+    let map;
+    let markers = [];
+
+// Inicializa o mapa em Belo Horizonte
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -19.9166813, lng: -43.9344931 },
+    zoom: 12,
+  });
+}
+
  
-
-
 
 const unidades = [
   {
