@@ -1,0 +1,105 @@
+:root{
+  --top:#B9EEF6;      /* azul claro do topo/rodapé do print */
+  --bg:#ffffff;       /* fundo branco da área central */
+  --text:#0a0a0a;
+  --muted:#6b7280;
+  --green-a:#2fa33a;  /* botão */
+  --green-b:#1a7a22;
+  --shadow-btn: 0 6px 14px rgba(0,0,0,.18);
+}
+
+/* Reset básico */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial;
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* ===== TOPO (título à esquerda, menu à direita) ===== */
+.topbar{
+  background: var(--top);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.topbar .wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:24px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.topbar h1{
+  margin:0;
+  font-size: clamp(28px, 4vw, 44px);   /* grande como no print */
+  font-weight:800;
+}
+.topbar nav{display:flex; gap:36px}
+.topbar nav a{color:#0b1b2a; text-decoration:none; font-weight:600}
+
+/* ===== CONTEÚDO (form à esquerda, sem cartão) ===== */
+main.wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:64px 32px 48px;   /* cria o “respiro” do print */
+  display:block;            /* nada centralizado */
+}
+
+/* bloco do formulário (sem card) */
+.card{
+  width:min(520px,100%);    /* largura semelhante ao print */
+  background:transparent;
+  padding:0;                /* sem fundo/brilho */
+  border-radius:0;
+  box-shadow:none;
+  margin-left:72px;         /* desloca para a esquerda como no print */
+}
+
+/* Label verde, input arredondado e borda suave */
+.label{display:block; color:#1a7a22; font-weight:800; margin:0 0 8px}
+#cpf{
+  width:100%;
+  padding:14px 16px;
+  border-radius:10px;
+  border:1px solid #d1d9e0;   /* cinza claro do print */
+  outline:none;
+  font-size:18px;
+}
+#cpf:focus{border-color:#9fbef7; box-shadow:0 0 0 3px rgba(159,190,247,.25)}
+.hint{display:block; margin-top:8px; color:var(--muted)}
+
+/* Botões – primário verde com sombra, secundário sem borda forte */
+.actions{display:flex; gap:16px; margin-top:18px}
+button{
+  appearance:none; border:0; border-radius:12px; padding:12px 20px;
+  font-weight:800; cursor:pointer;
+}
+#buscar{
+  color:#fff;
+  background: linear-gradient(180deg,var(--green-a),var(--green-b));
+  box-shadow: var(--shadow-btn);
+}
+button.ghost{
+  background:#eef4ff; color:#1f3a78; box-shadow: var(--shadow-btn);
+}
+
+/* ===== Rodapé chapado azul claro ===== */
+.footer{
+  background: var(--top);
+  color:#0e2a3f;
+  padding:16px 0;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+.footer .wrap{
+  max-width:1280px; margin:0 auto; padding:0 32px;
+  display:flex; justify-content:center; align-items:center;
+}
+
+/* Resultado (quando houver) – opcional; mantém estilo neutro */
+.result-card{margin-top:24px; width:min(880px,100%); background:#fff; border-radius:12px; padding:24px; box-shadow:0 8px 18px rgba(0,0,0,.08)}
+.result-card h2{margin:0 0 6px}
+.result-card .meta{color:var(--muted); margin:0 0 16px}
+.badge{display:inline-block;background:#e9f7ef;color:#1a7a22;border:1px solid #a7f3d0;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:800}
+.empty{margin-top:12px;color:#9ca3af}

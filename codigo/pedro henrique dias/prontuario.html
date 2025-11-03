@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prontuários e informações — Portal Mamãe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOPO -->
+  <header class="topbar">
+    <div class="wrap">
+      <h1>Prontuários e informações</h1>
+      <nav>
+        <!-- caminho relativo correto a partir de codigo/Pedro/prontuario.html -->
+        <a href="../Victor/prestador.html">Prestador</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="wrap">
+    <form id="busca-form" class="card" autocomplete="off">
+      <label for="cpf" class="label">CPF da gestante</label>
+      <input id="cpf" name="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" aria-describedby="hint" />
+      <small id="hint" class="hint">Digite o CPF completo; a máscara aplica automaticamente.</small>
+      <div class="actions">
+        <button id="buscar" type="submit">Pesquisar</button>
+        <button type="reset" class="ghost">Limpar</button>
+      </div>
+    </form>
+
+    <section id="resultado"></section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="wrap">www.portalmamae.com.br © <span id="year"></span></div>
+  </footer>
+
+  <script>
+    // atualiza o ano do rodapé
+    document.addEventListener('DOMContentLoaded',()=> {
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

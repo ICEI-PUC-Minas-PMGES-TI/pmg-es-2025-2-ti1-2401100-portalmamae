@@ -1,0 +1,48 @@
+{
+  "gestantes": [
+    {
+      "id": 1,
+      "cpf": "123.456.789-00",
+      "nome": "Maria das Dores Almeida",
+      "idade": 29,
+      "email": "maria.almeida@portalmae.com",
+      "telefone": "(31) 98888-1111",
+      "historicoMedico": [
+        {
+          "data": "2025-03-10",
+          "descricao": "Consulta pré-natal - 2º trimestre",
+          "resultado": "Gestação saudável, pressão normal."
+        },
+        {
+          "data": "2025-05-22",
+          "descricao": "Exame de ultrassonografia",
+          "resultado": "Bebê com desenvolvimento normal, sem alterações."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cpf": "987.654.321-11",
+      "nome": "Juliana Ribeiro Costa",
+      "idade": 32,
+      "email": "juliana.costa@portalmae.com",
+      "telefone": "(31) 97777-2222",
+      "historicoMedico": [
+        {
+          "data": "2025-01-15",
+          "descricao": "Exame de sangue completo",
+          "resultado": "Hemoglobina dentro da normalidade."
+        }
+      ]
+    }
+  ],
+  "medicos": [
+    {
+      "id": 1,
+      "nome": "Dra. Helena Vasconcelos",
+      "especialidade": "Ginecologia e Obstetrícia",
+      "crm": "MG12345",
+      "email": "helena.vasconcelos@portalmae.com"
+    }
+  ]
+}
