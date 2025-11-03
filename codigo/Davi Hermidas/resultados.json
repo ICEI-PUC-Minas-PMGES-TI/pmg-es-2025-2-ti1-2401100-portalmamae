@@ -1,8 +1,38 @@
-{
-  "uf": "Minas Gerais",
-  "cidade": "Belo Horizonte",
-  "bairro": "Alipio de Melo",
-  "servico": "Consulta",
-  "especialidade": "Obstetra",
-  "acompanhamento": "Não"
-}
+[
+  {
+    "id": 1,
+    "uf": "MG",
+    "cidade": "Belo Horizonte",
+    "rua": "Rua dos Eletrotécnicos",
+    "cep": "30840150",
+    "servico": "Consulta",
+    "especialidade": "Obstetra",
+    "data": "2025-11-12",
+    "horario": "09:00",
+    "acompanhamento": "Sim"
+  },
+  {
+    "id": 2,
+    "uf": "SP",
+    "cidade": "São Paulo",
+    "rua": "Av. Paulista",
+    "cep": "01311000",
+    "servico": "Exame Pré-natal",
+    "especialidade": "Ginecologista",
+    "data": "2025-11-15",
+    "horario": "14:30",
+    "acompanhamento": "Não"
+  },
+  {
+    "id": 3,
+    "uf": "RJ",
+    "cidade": "Rio de Janeiro",
+    "rua": "Rua das Laranjeiras",
+    "cep": "22240003",
+    "servico": "Consulta",
+    "especialidade": "Pediatra",
+    "data": "2025-11-18",
+    "horario": "10:00",
+    "acompanhamento": "Sim"
+  }
+]

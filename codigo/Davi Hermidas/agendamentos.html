@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portal Mamãe</title>
-        <link rel="stylesheet" href="davi-style.css">
-    </head>
-    <body>
-        <div class="container">
-            <!--Codigo Para o Cabeçalho-->
-            <header>
-                <h1>Portal Mamãe</h1>
-            </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Mamãe</title>
+    <link rel="stylesheet" href="davi-style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Portal Mamãe</h1>
+      </header>
 
-            <main>
-                <!--Formulário de agendamento-->
-                <form id="formMamae" class="formulario">
-                    <label for="uf">UF</label>
-                    <input type="text" id="uf" name="uf" placeholder="Digite o estado" required>
-                    
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+      <main>
+        <form id="formMamae" class="formulario">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="Digite o CEP" maxlength="9" required>
 
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+          <label for="uf">UF</label>
+          <input type="text" id="uf" name="uf" placeholder="Preenchido automaticamente" readonly>
 
-                    <label for="servico">Escolha o tipo de serviço</label>
-                    <input type="text" id="servico" name="servico" placeholder="Ex: consulta, exame..." required>
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Preenchido automaticamente" readonly>
 
+          <label for="rua">Rua</label>
+          <input type="text" id="rua" name="rua" placeholder="Preenchido automaticamente" readonly>
 
-                    <label for="especialidade">Escolha a Especialidade</label>
-                    <input type="text" id="especialidade" name="especialidade" placeholder="Ex: obstetra, pediatra..." required>
-                    
-                    <p>Já possui médico para acompanhamento?</p>
-                    <div class="opcoes">
-                        <label><input type="radio" name="acompanhamento" value="Sim" required>Sim</label>
-                        <label><input type="radio" name="acompanhamento" value="Não" required>Não</label>
-                    </div>
+          <label for="servico">Escolha o tipo de serviço</label>
+          <input type="text" id="servico" name="servico" placeholder="Ex: consulta, exame..." required>
 
-                    <button type="submit">Concluir</button>
-                </form>
-                <!--Espaço da imagem-logo da pagina-->
-                <div class="imagem">
-                    <img src="imagens/MedicaeGestante.png" alt="Médica e gestante">
-                </div>
-            </main>
-            <!--Espaço do rodapé-->
-            <footer>
-                <p>www.portalmamae.com.br © 2025</p>
-            </footer>
+          <label for="especialidade">Escolha a Especialidade</label>
+          <input type="text" id="especialidade" name="especialidade" placeholder="Ex: obstetra, pediatra..." required>
+
+          <!-- Bloco de agendamento -->
+          <div class="agendamento">
+            <div class="campo-data">
+              <label for="data">Data da consulta</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="campo-horario">
+              <label for="horario">Horário</label>
+              <select id="horario" name="horario" required>
+                <option value="">Selecione o horário</option>
+              </select>
+            </div>
+          </div>
+
+          <p>Já possui médico para acompanhamento?</p>
+          <div class="opcoes">
+            <label><input type="radio" name="acompanhamento" value="Sim" required>Sim</label>
+            <label><input type="radio" name="acompanhamento" value="Não" required>Não</label>
+          </div>
+
+          <button type="submit">Concluir</button>
+        </form>
+
+        <div class="imagem">
+          <img src="imagens/MedicaeGestante.png" alt="Médica e gestante">
         </div>
-        <!--Importando o JavaScript-->
-        <script src="script.js"></script>
-    </body>
+      </main>
+
+      <footer>
+        <p>www.portalmamae.com.br © 2025</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script async defer 
+        src="api googlemaps">
+    </script>
+  </body>
 </html>

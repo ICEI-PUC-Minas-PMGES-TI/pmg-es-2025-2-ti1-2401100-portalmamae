@@ -1,145 +1,192 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: #f7a7a7;
-    padding: 20px;
-    text-align: left;
+  background-color: #f7a7a7;
+  padding: 20px;
+  text-align: left;
 }
 
 header h1 {
-    color: #000;
-    font-size: 1.8rem;
-    font-weight: bold;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    gap: 20px; /* espaço entre formulário e imagem */
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
 }
 
 /* Formulário */
 .formulario {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .formulario label {
-    font-weight: bold;
-    color: #1a531f;
+  font-weight: bold;
+  color: #1a531f;
 }
 
-.formulario input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; /* garante largura total do container */
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.formulario input[readonly] {
+  background-color: #f3f3f3;
+  color: #666;
 }
 
 .opcoes {
-    display: flex;
-    gap: 20px;
-    color: #1a531f;
-    flex-wrap: wrap; /* evita overflow em telas pequenas */
+  display: flex;
+  gap: 20px;
+  color: #1a531f;
+  flex-wrap: wrap;
 }
 
 button {
-    background-color: #2d6a4f;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    width: fit-content; /* botão não fica esticado */
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: fit-content;
 }
 
 button:hover {
-    background-color: #1b4332;
+  background-color: #1b4332;
+}
+
+/* Bloco de agendamento */
+.agendamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.campo-data,
+.campo-horario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Imagem */
 .imagem {
-    width: 45%;
-    display: flex;
-    justify-content: center;
+  width: 45%;
+  display: flex;
+  justify-content: center;
 }
 
 .imagem img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Rodapé */
 footer {
-    background-color: #f7a7a7;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
-    color: #333;
+  background-color: #f7a7a7;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #333;
 }
 
-/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
-
-/* Tablets e telas médias */
+/* Responsividade */
 @media (max-width: 992px) {
-    main {
-        flex-direction: column;
-        padding: 20px;
-        align-items: flex-start;
-    }
+  main {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-    .formulario,
-    .imagem {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  .formulario,
+  .imagem {
+    width: 100%;
+  }
 
-    .opcoes {
-        gap: 10px;
-    }
+  .agendamento {
+    flex-direction: column;
+  }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
-    header h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    .formulario input[type="text"] {
-        padding: 10px;
-    }
+  button {
+    width: 100%;
+  }
 
-    button {
-        width: 100%; /* botão ocupa largura total em mobile */
+  footer {
+    font-size: 0.8rem;
+  }
+}
+/* Mapa */
+.mapa-container {
+    width: 45%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+@media (max-width: 992px){
+    .mapa-container {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
     }
+}
+.filtro-mapa {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  font-size: 0.9rem;
+}
 
-    .opcoes {
-        flex-direction: column;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
+.filtro-mapa select {
+  margin-left: 5px;
+  padding: 4px;
+  border-radius: 5px;
 }
