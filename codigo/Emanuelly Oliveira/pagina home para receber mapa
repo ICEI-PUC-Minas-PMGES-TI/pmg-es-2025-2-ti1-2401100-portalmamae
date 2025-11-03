@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Mamãe</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="container">
+            <!--Cabeçalho-->
+            <header>
+                <h1>Portal Mamãe</h1>
+
+                <!--link de paginas-->   
+                <div class="links"> 
+                    <a href="id" class="home-link">Agendar consulta</a>
+                    <a href="id" class="home-link">Portal Gestante</a>
+                    <a href="id" class="home-link">Portal Servidor</a>
+                </div>
+            </header>
+
+            <section>
+                <!--formulário de busca--> 
+                <div class="form-container">
+                    <form id="formMamae">
+                    <h1>Confira as Unidades próximas a você</h1>
+
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" placeholder="Ex: MG">
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Ex: Belo Horizonte">
+
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" placeholder="Ex: Centro">
+
+                    <button type="submit">Buscar</button>
+                    </form>
+
+                    <div id="map"></div>
+                </div>
+            </section>
+
+                <!-- Google Maps API -->
+                 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzOr03JOdz5dioxkEh5y7e85fStOxzYk&callback=initMap"></script>
+                <script src="home.js"></script>
+    </body>
+
+            <!--rodapé-->
+            <footer>
+                <p>www.portalmamae.com.br © 2025</p>
+            </footer>
+</html>
+
+
+    // adiciona os links
+    const linksContainer = document.getElementById("links");
+    linksContainer.innerHTML = "";
+    links["links"].forEach(item => {
+        const a = document.createElement("a");
+        a.href = item.link;
+        a.textContent = item.titulo;
+        a.classList.add("info-link");
+        a.target = "_blank";     
+        linksContainer.appendChild(a);
+    });
+
+    let map;
+    let markers = [];
+
+// Inicializa o mapa em Belo Horizonte
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -19.9166813, lng: -43.9344931 },
+    zoom: 12,
+  });
+}
+
+ 
+
+const unidades = [
+  {
+    "nome": "Maternidade Odete Valadares",
+    "endereco": "Av. do Contorno, 9330, Prado, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital Sofia Feldman",
+    "endereco": "Rua Antônio Bandeira, 1060, Tupi B, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital Metropolitano Odilon Behrens",
+    "endereco": "Rua João Carvalhais de Paiva, São Cristóvão, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital e Maternidade BH Mater",
+    "endereco": "Rua Além Paraíba, 131, Lagoinha, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital das Clínicas UFMG",
+    "endereco": "Av. Professor Alfredo Balena, 110, Santa Efigênia, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital Infantil João Paulo II",
+    "endereco": "Av. dos Andradas, 567, Santa Efigênia, Belo Horizonte, MG"
+  },
+  {
+    "nome": "Hospital Júlia Kubitschek",
+    "endereco": "Rua Dr. Cristiano Rezende, 2213, Barreiro, Belo Horizonte, MG"
+  },
+  {
+    "nome": "UPA Centro-Sul",
+    "endereco": "Av. do Contorno, 5432, Centro, Belo Horizonte, MG"
+  },
+  {
+    "nome": "UBS Carlos Prates",
+    "endereco": "Rua Padre Eustáquio, 2490, Carlos Prates, Belo Horizonte, MG"
+  },
+  {
+    "nome": "UBS Vila Pinho",
+    "endereco": "Rua Lagoa Santa, 100, Vila Pinho, Belo Horizonte, MG"
+  }
+]
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+/*cores retiradas do figma*/
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FEA1A3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /*link de pagina*/
+header a{ 
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    }
+
+    /*texto cabeçalho*/
+header h1 {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #1a6e25;
+    margin-top: 15px;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #474646;
+    border-radius: 6px;
+    font-size: 14px;
+    }
+
+button {
+    margin-top: 20px;
+    background-color: #FEA1A3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #e97c7e;
+}
+
+#map {
+    flex: 1;
+    width: 500px;
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #FEA1A3;
+    padding: 15px;
+    font-size: 0.9em;
+}

@@ -1,0 +1,10 @@
+{
+  "prontuario": {
+    "nome": "Maria de Jesus Silva",
+    "idade": "35 anos",
+    "motivo": "Queixa de dor e nódulo na mama esquerda há aproximadamente 3 meses, com aumento progressivo de tamanho. Nega febre ou secreção mamilar.",
+    "historia": "Paciente relata início dos sintomas com desconforto leve, evoluindo para dor moderada e a percepção de uma massa palpável na região superior e externa da mama esquerda. Menarca aos 12 anos, G2P2A0. Sem histórico familiar direto de câncer de mama. Realizou última mamografia há 2 anos (normal).",
+    "exames": "Mamografia (BI-RADS 4), Ultrassonografia Mamária (Nódulo sólido irregular, BIRADS 4). Biópsia por agulha grossa (Core Biopsy) pendente de resultado. Solicitar exames pré-operatórios.",
+    "diagnostico": "Suspeita de Carcinoma ductal invasivo (CID C50.4). Conduta: Aguardar resultado da biópsia para confirmação e planejar tratamento (cirurgia e oncologia)."
+  }
+}
