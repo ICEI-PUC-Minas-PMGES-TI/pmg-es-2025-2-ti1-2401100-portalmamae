@@ -1,61 +1,47 @@
 // ./iaGenerator.js
-
-// ----- COLE SUA CHAVE DE API SECRETA AQUI -----
-const MINHA_CHAVE_SECRETA = "AIzaSyCo4WOwjSokR5_12BbWM0D4iSDQzrR5avc";
-// ---------------------------------------------
-
-// Esta é a URL da API MODERNA (v1), e não a v1beta.
-// Nós também estamos "embutindo" o modelo que queremos na URL.
-const URL_API_V1 = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${MINHA_CHAVE_SECRETA}`;
-
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 async function gerarDadosComIA(prompt) {
     try {
-        // 1. Prepara o "corpo" da mensagem no formato que o Google espera
-        const bodyPayload = {
-            contents: [
-                {
-                    parts: [
-                        {
-                            text: prompt
-                        }
-                    ]
-                }
-            ]
-        };
-
-        // 2. Faz a ligação "manual" usando fetch (sem a biblioteca zumbi)
-        const response = await fetch(URL_API_V1, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(bodyPayload)
-        });
-
-        // 3. Verifica se a ligação foi um sucesso
-        if (!response.ok) {
-            // Se o Google não gostou (ex: 404, 403, 400), ele vai falhar aqui
-            const errorData = await response.json();
-            console.error("Erro da API do Google (fetch):", errorData);
-            throw new Error(`O Google respondeu com status: ${response.status}`);
-        }
-
-        // 4. Pega a resposta de IA
-        const data = await response.json();
+        // ----- INICIALIZE A IA AQUI DENTRO -----
+        // 1. A IA é "ligada" (sabemos que o dotenv do gerarExames.js já rodou)
+        const genAI = new GoogleGenerativeAI(process.env.API_KEY_GEMINI);
         
-        // 5. Extrai o texto
-        const textoIA = data.candidates[0].content.parts[0].text;
+        // 2. Use o nome do modelo que NÓS SABEMOS que funciona
+        // (confirmado pelo seu teste 'verificarModelos.js')
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); 
+
+        // 3. A IA gera o conteúdo
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const textoIA = response.text();
         
-        // 6. Tenta converter o texto para JSON
-        const jsonMatch = textoIA.match(/```json\n([\s\S]*?)\n```/);
+        // 4. [A SOLUÇÃO] Limpa a resposta da IA
+        console.log("[Debug IA] Resposta recebida da IA:", textoIA); // Log para vermos a resposta
+
+        // Procura por ```json ... ```
+        const jsonMatch = textoIA.match(/```json([\s\S]*?)```/); 
+
         if (jsonMatch && jsonMatch[1]) {
+            // Sucesso! A regex achou o JSON dentro dos ```
+            console.log("[Debug IA] JSON extraído da regex.");
             return JSON.parse(jsonMatch[1]);
+        } else {
+            // A regex falhou. Talvez a IA tenha retornado SÓ o JSON?
+            try {
+                // Tenta parsear o texto inteiro
+                console.log("[Debug IA] Regex falhou, tentando parsear o texto inteiro.");
+                return JSON.parse(textoIA);
+            } catch (e) {
+                // Falhou também. A resposta da IA não é um JSON.
+                console.error("A IA respondeu, mas não consegui extrair o JSON. Resposta da IA:", textoIA);
+                throw new Error("A resposta da IA não era um JSON válido.");
+            }
         }
-        return JSON.parse(textoIA);
 
     } catch (error) {
-        console.error("Erro detalhado dentro do gerarDadosComIA (bypass):", error); 
+        // Isso vai pegar erros da conexão ou o erro acima
+        console.error("Erro detalhado dentro do gerarDadosComIA:", error); 
         throw new Error("Falha na API de IA.");
     }
 }
