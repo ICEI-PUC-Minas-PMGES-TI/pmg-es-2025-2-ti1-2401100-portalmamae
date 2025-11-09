@@ -49,12 +49,8 @@ h3{
 ul{
     padding: 10px 0 100px 80px;
 }
+
 li{
     margin: 20px;
-    
     font-size: 18px;
-}
-/*Provisório para gerar resultados via backend*/
-#resul{
-    display: flex;
 }

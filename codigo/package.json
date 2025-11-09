@@ -4,13 +4,16 @@
   "description": "Aplicação Web com backend baseado no JSON Server",
   "main": "index.js",
   "scripts": {
-   "start": "npx json-server --watch ./db/db.json --static ./public"
+    "start": "npx json-server --watch ./db/db.json --static ./public"
   },
   "keywords": [],
   "author": "Rommel Vieira Carneiro",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
     "express": "^4.17.1",
-    "json-server": "^0.17.4"
+    "json-server": "^0.17.4",
+    "puppeteer": "^24.29.1"
   }
 }

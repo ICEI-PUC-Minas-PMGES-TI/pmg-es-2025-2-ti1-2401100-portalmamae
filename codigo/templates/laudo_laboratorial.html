@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Laudo de Exame Laboratorial</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 20px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; border: 1px solid #eee; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: #0056b3; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;}
+        .header, .footer { text-align: center; margin-bottom: 20px; }
+        .info-block { margin-bottom: 15px; }
+        .info-block span { font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .conclusion, .notes { margin-top: 30px; border-top: 1px dashed #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Portal Mamãe - Laudo de Exame</h1>
+            <h2>{{tipoExame}}</h2>
+        </div>
+
+        <div class="info-block">
+            <p><span>Clínica:</span> {{clinica}}</p>
+            <p><span>Médico Responsável:</span> {{medicoResponsavel}}</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Dados da Paciente:</h3>
+            <p><span>Nome:</span> {{nomePaciente}}</p>
+            <p><span>Idade:</span> {{idadePaciente}}</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Detalhes do Exame:</h3>
+            <p><span>Data da Coleta:</span> {{dataColeta}}</p>
+            <p><span>Indicação Clínica:</span> {{indicacaoClinica}}</p>
+        </div>
+
+        <h3>Resultados:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Valor</th>
+                    <th>Referência</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{resultadosTable}}
+            </tbody>
+        </table>
+
+        <div class="conclusion">
+            <h3>Conclusão:</h3>
+            <p>{{conclusao}}</p>
+        </div>
+
+        <div class="notes">
+            <h3>Observações:</h3>
+            <p>{{observacoes}}</p>
+        </div>
+
+        <div class="footer">
+            <p>Documento gerado automaticamente.</p>
+        </div>
+    </div>
+</body>
+</html>

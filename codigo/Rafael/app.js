@@ -1,4 +1,4 @@
-const JSON_URL =   'dados.json';
+const JSON_URL = 'http://localhost:3000/gestantes/G00012';
 
 const nomeCompleto = document.querySelector('#nomeCompleto');
 const listaMedica = document.querySelector('.listaMedica');
