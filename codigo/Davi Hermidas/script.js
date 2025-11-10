@@ -29,8 +29,6 @@ function mostrarMapaPorEndereco(endereco, servico) {
       });
 
       buscarLocaisProximos(localizacao, servico);
-    } else {
-      alert("Não foi possível encontrar o endereço no mapa.");
     }
   });
 }
@@ -39,7 +37,7 @@ function mostrarMapaPorEndereco(endereco, servico) {
 function buscarLocaisProximos(localizacao, servico) {
   const request = {
     location: localizacao,
-    radius: 2000, // 2 km de raio
+    radius: 2000,
     keyword: servico || "hospital",
   };
 
@@ -79,16 +77,20 @@ function configurarDataMinima() {
   dataInput.value = "2025-01-01";
 }
 
-// Busca CEP no ViaCEP
+// Busca CEP no ViaCEP (corrigido)
 async function buscarCEP(cep) {
   cep = cep.replace(/\D/g, "");
-  if (cep.length !== 8) return;
+
+  // Não tenta buscar CEP inválido
+  if (cep.length !== 8) {
+    return;
+  }
 
   try {
-    const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const resposta = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
     const dados = await resposta.json();
 
-    if (dados.erro) {
+    if (!dados || dados.erro) {
       alert("❌ CEP não encontrado!");
       return;
     }
@@ -97,14 +99,17 @@ async function buscarCEP(cep) {
     document.getElementById("cidade").value = dados.localidade;
     document.getElementById("rua").value = dados.logradouro;
 
-    // Mostra o mapa centralizado nesse endereço
     const enderecoCompleto = `${dados.logradouro}, ${dados.localidade}, ${dados.uf}`;
     const servico = document.getElementById("servico").value;
-    mostrarMapaPorEndereco(enderecoCompleto, servico);
+
+    // Só abre o mapa se existir a div #map
+    if (window.google && map) {
+      mostrarMapaPorEndereco(enderecoCompleto, servico);
+    }
 
   } catch (erro) {
-    alert("Erro ao buscar o CEP.");
-    console.error(erro);
+    console.error("Erro na busca do CEP:", erro);
+    alert("Não foi possível buscar o CEP agora. Tente novamente.");
   }
 }
 
@@ -119,35 +124,41 @@ document.addEventListener("DOMContentLoaded", () => {
   configurarDataMinima();
 });
 
+// Limpa tudo do formulário após envio
+function limparFormulario() {
+  const form = document.getElementById("formMamae");
+  form.reset();
+
+  // Limpa campos automáticos
+  document.getElementById("uf").value = "";
+  document.getElementById("cidade").value = "";
+  document.getElementById("rua").value = "";
+
+  // Reseta horários
+  const select = document.getElementById("horario");
+  select.selectedIndex = 0;
+}
+
 // Envio do formulário
 document.getElementById("formMamae").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const uf = document.getElementById("uf").value;
-  const cidade = document.getElementById("cidade").value;
-  const rua = document.getElementById("rua").value;
-  const cep = document.getElementById("cep").value;
-  const servico = document.getElementById("servico").value;
-  const especialidade = document.getElementById("especialidade").value;
-  const data = document.getElementById("data").value;
-  const horario = document.getElementById("horario").value;
-  const acompanhamento = document.querySelector('input[name="acompanhamento"]:checked').value;
-
   const dadosFormulario = {
-    uf,
-    cidade,
-    rua,
-    cep,
-    servico,
-    especialidade,
-    data,
-    horario,
-    acompanhamento,
+    uf: document.getElementById("uf").value,
+    cidade: document.getElementById("cidade").value,
+    rua: document.getElementById("rua").value,
+    cep: document.getElementById("cep").value,
+    servico: document.getElementById("servico").value,
+    especialidade: document.getElementById("especialidade").value,
+    data: document.getElementById("data").value,
+    horario: document.getElementById("horario").value,
+    acompanhamento: document.querySelector('input[name="acompanhamento"]:checked').value,
   };
 
   const jsonDados = JSON.stringify(dadosFormulario, null, 2);
   alert(`✅ Dados enviados com sucesso!\n\n${jsonDados}`);
   console.log("📦 JSON gerado:", jsonDados);
 
-  mostrarMapaPorEndereco(`${rua}, ${cidade}, ${uf}`, servico);
+  // Reseta formulário
+  limparFormulario();
 });
