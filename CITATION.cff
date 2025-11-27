@@ -14,20 +14,18 @@ authors:
     given-names: Bernardo Caetano Rocha de
   - family-names: Ananias
     given-names: Victor Gabriel Soares
-  - family-names: Pereira
-    given-names: Pedro Henrique Dias
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Andrade
+  - family-names: Andrade
     given-names: Michelle Hanne Soares de
-  - name-suffix: Professor
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Lacerda
+  - family-names: Lacerda
     given-names: Lucca Soares de Paiva
-  - name-suffix: Professor
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Pereira
+  - family-names: Pereira
     given-names: Daniel Machado Osório
+    name-suffix: Professor
+    affiliation: PUC Minas
 keywords:
   - saúde
   - gestantes
@@ -37,3 +35,4 @@ repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-24
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2025-11-27
+
