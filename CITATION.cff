@@ -1,31 +1,38 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Portal Mamãe
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
+  - family-names: Oliveira
+    given-names: Rafael Galileu Thales
+  - family-names: Oliveira
+    given-names: Vinícius Matos
+  - family-names: Cabral
+    given-names: Emanuelly Oliveira Arruda
+  - family-names: Brandão
+    given-names: Davi Hermidas Lage
+  - family-names: Lima
+    given-names: Bernardo Caetano Rocha de
+  - family-names: Ananias
+    given-names: Victor Gabriel Soares
+  - family-names: Andrade
+    given-names: Michelle Hanne Soares de
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
+  - family-names: Lacerda
+    given-names: Lucca Soares de Paiva
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+  - family-names: Pereira
+    given-names: Daniel Machado Osório
+    name-suffix: Professor
+    affiliation: PUC Minas
 keywords:
-  - 
-  - 
-repository-code: 
+  - saúde
+  - gestantes
+  - atendimento público
+  - acompanhamento pré-natal
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2025-11-27
+
