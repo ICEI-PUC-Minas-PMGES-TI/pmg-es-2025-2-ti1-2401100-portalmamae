@@ -37,5 +37,34 @@
         }
       ]
     }
+  ],
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "admin": true
+    },
+    {
+      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "login": "MariaAlmeida",
+      "senha": "123",
+      "nome": "Maria das Dores Almeida",
+      "cpf": "123.456.789-00",
+      "telefone": "(31) 98888-1111",
+      "email": "maria.almeida@portalmae.com",
+      "idade": 29,
+      "admin": false
+    },
+    {
+      "id": "d4f5e6a1-2b3c-4d5e-8f9a-0b1c2d3e4f5g",
+      "login": "medico",
+      "senha": "123",
+      "nome": "Médico Responsável",
+      "email": "medico@abc.com",
+      "admin": false
+    }
   ]
 }
