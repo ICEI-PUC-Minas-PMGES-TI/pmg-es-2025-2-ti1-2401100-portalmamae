@@ -1,105 +1,247 @@
-:root{
-  --top:#B9EEF6;      /* azul claro do topo/rodapé do print */
-  --bg:#ffffff;       /* fundo branco da área central */
-  --text:#0a0a0a;
-  --muted:#6b7280;
-  --green-a:#2fa33a;  /* botão */
-  --green-b:#1a7a22;
-  --shadow-btn: 0 6px 14px rgba(0,0,0,.18);
+/* ---------------------------------------------------- */
+/* RESET E CONFIGURAÇÕES GLOBAIS */
+/* ---------------------------------------------------- */
+
+* {
+    /* Reseta margens e paddings padrão de todos os elementos */
+    margin: 0;
+    padding: 0;
+    /* Inclui padding e bordas no cálculo do tamanho total do elemento */
+    box-sizing: border-box;
 }
 
-/* Reset básico */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial;
-  color:var(--text);
-  background:var(--bg);
+body {
+    /* Usa a fonte Poppins (se linkada) ou uma sans-serif genérica */
+    font-family: 'Poppins', sans-serif;
+    /* Fundo da página, levemente azul (como na imagem) */
+    background-color: #ffffff; 
+    /* Altura mínima para o footer ficar no final em telas pequenas */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ===== TOPO (título à esquerda, menu à direita) ===== */
-.topbar{
-  background: var(--top);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-}
-.topbar .wrap{
-  max-width:1280px;
-  margin:0 auto;
-  padding:24px 32px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.topbar h1{
-  margin:0;
-  font-size: clamp(28px, 4vw, 44px);   /* grande como no print */
-  font-weight:800;
-}
-.topbar nav{display:flex; gap:36px}
-.topbar nav a{color:#0b1b2a; text-decoration:none; font-weight:600}
-
-/* ===== CONTEÚDO (form à esquerda, sem cartão) ===== */
-main.wrap{
-  max-width:1280px;
-  margin:0 auto;
-  padding:64px 32px 48px;   /* cria o “respiro” do print */
-  display:block;            /* nada centralizado */
+/* Container de largura fixa/máxima para centralizar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding lateral para responsividade */
 }
 
-/* bloco do formulário (sem card) */
-.card{
-  width:min(520px,100%);    /* largura semelhante ao print */
-  background:transparent;
-  padding:0;                /* sem fundo/brilho */
-  border-radius:0;
-  box-shadow:none;
-  margin-left:72px;         /* desloca para a esquerda como no print */
+/* ---------------------------------------------------- */
+/* HEADER (Topo da Página) */
+/* ---------------------------------------------------- */
+
+.main-header {
+    /* Cor de fundo do cabeçalho (Azul claro da imagem) */
+    background-color: #c9f0ff; 
+    padding: 20px 0;
+    /* Garante que o header é o topo da página */
+    width: 100%;
 }
 
-/* Label verde, input arredondado e borda suave */
-.label{display:block; color:#1a7a22; font-weight:800; margin:0 0 8px}
-#cpf{
-  width:100%;
-  padding:14px 16px;
-  border-radius:10px;
-  border:1px solid #d1d9e0;   /* cinza claro do print */
-  outline:none;
-  font-size:18px;
-}
-#cpf:focus{border-color:#9fbef7; box-shadow:0 0 0 3px rgba(159,190,247,.25)}
-.hint{display:block; margin-top:8px; color:var(--muted)}
-
-/* Botões – primário verde com sombra, secundário sem borda forte */
-.actions{display:flex; gap:16px; margin-top:18px}
-button{
-  appearance:none; border:0; border-radius:12px; padding:12px 20px;
-  font-weight:800; cursor:pointer;
-}
-#buscar{
-  color:#fff;
-  background: linear-gradient(180deg,var(--green-a),var(--green-b));
-  box-shadow: var(--shadow-btn);
-}
-button.ghost{
-  background:#eef4ff; color:#1f3a78; box-shadow: var(--shadow-btn);
+.header-content {
+    display: flex;
+    /* Alinha o título e a navegação horizontalmente */
+    justify-content: space-between; 
+    align-items: center;
 }
 
-/* ===== Rodapé chapado azul claro ===== */
-.footer{
-  background: var(--top);
-  color:#0e2a3f;
-  padding:16px 0;
-  border-top: 1px solid rgba(0,0,0,.06);
-}
-.footer .wrap{
-  max-width:1280px; margin:0 auto; padding:0 32px;
-  display:flex; justify-content:center; align-items:center;
+.portal-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
 }
 
-/* Resultado (quando houver) – opcional; mantém estilo neutro */
-.result-card{margin-top:24px; width:min(880px,100%); background:#fff; border-radius:12px; padding:24px; box-shadow:0 8px 18px rgba(0,0,0,.08)}
-.result-card h2{margin:0 0 6px}
-.result-card .meta{color:var(--muted); margin:0 0 16px}
-.badge{display:inline-block;background:#e9f7ef;color:#1a7a22;border:1px solid #a7f3d0;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:800}
-.empty{margin-top:12px;color:#9ca3af}
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Efeito hover */
+}
+
+/* ---------------------------------------------------- */
+/* CONTEÚDO PRINCIPAL (Pesquisa) */
+/* ---------------------------------------------------- */
+
+.main-content {
+    /* Preenche o espaço restante (importante para o layout flex de body) */
+    flex-grow: 1; 
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    /* Margem inferior conforme o design da imagem */
+    margin-bottom: 40px; 
+}
+
+/* Container que usa Flexbox para alinhar formulário e imagem */
+.search-flex-container {
+    display: flex;
+    /* Espaço entre as colunas */
+    gap: 80px; 
+    /* Alinha os itens ao centro verticalmente */
+    align-items: center; 
+}
+
+/* Coluna do Formulário (Ocupa uma parte do espaço) */
+.search-form-column {
+    /* Define o tamanho base para que o formulário não seja muito grande */
+    flex: 1 1 400px; 
+    max-width: 400px;
+}
+
+.label-cpf {
+    display: block; /* Garante que o label ocupe sua própria linha */
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Campo de Input do CPF */
+#cpf {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Cor de fundo cinza claro como na imagem */
+    background-color: #e0e0e0; 
+    /* Margem entre o input e os botões */
+    margin-bottom: 15px; 
+    /* Remove a borda azul padrão de foco para manter o visual */
+    outline: none; 
+}
+
+/* ---------------------------------------------------- */
+/* BOTÕES */
+/* ---------------------------------------------------- */
+
+.buttons-container {
+    /* Usado para alinhar o Limpar abaixo do Buscar (visual da imagem) */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; /* Alinha o "Limpar" à esquerda */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: auto; /* Deixa o botão se ajustar ao conteúdo */
+}
+
+/* Estilo do Botão "Buscar" (Verde) */
+.btn-primary {
+    /* Cor de fundo do botão "Buscar" */
+    background-color: #38c172; 
+    color: white;
+    margin-bottom: 10px; /* Espaçamento com o botão Limpar */
+}
+
+.btn-primary:hover {
+    background-color: #2c9a5b;
+}
+
+/* Estilo do Botão "Limpar" (Azul claro, apenas texto) */
+.btn-secondary {
+    background: none; /* Sem fundo */
+    /* Cor do texto do botão "Limpar" */
+    color: #38c172; 
+    padding: 0; /* Remove padding para ficar como um link */
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.btn-secondary:hover {
+    color: #2c9a5b;
+}
+
+/* ---------------------------------------------------- */
+/* IMAGEM ILUSTRATIVA */
+/* ---------------------------------------------------- */
+
+/* Coluna da Imagem (Ocupa o restante do espaço) */
+.search-image-column {
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a imagem de prontuário (ícone) */
+.search-image-column img {
+    /* Tamanho máximo da imagem */
+    max-width: 100%; 
+    height: auto;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    width: 400px; 
+}
+
+/* ---------------------------------------------------- */
+/* FOOTER (Rodapé) */
+/* ---------------------------------------------------- */
+
+.main-footer {
+    padding: 10px 0;
+    /* Cor do fundo do rodapé, a mesma do background principal */
+    background-color: #92dbff; 
+    text-align: center;
+    border-top: 1px solid #baedf5; /* Linha sutil no topo */
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #353535;
+}
+
+/* ---------------------------------------------------- */
+/* MEDIA QUERIES (Responsividade) */
+/* ---------------------------------------------------- */
+
+/* Telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    
+    /* Quebra o layout em coluna para mobile */
+    .search-flex-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    }
+
+    /* Redefine o formulário para ocupar a largura total */
+    .search-form-column {
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* Oculta a imagem em telas muito pequenas para economizar espaço */
+    .search-image-column {
+        display: none; 
+    }
+
+    /* Ajuste do cabeçalho */
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

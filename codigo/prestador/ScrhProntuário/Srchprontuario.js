@@ -1,99 +1,73 @@
-// Máscara CPF
-function maskCPF(value) {
-  return value
-    .replace(/\D/g, '')
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d{1,2})$/, '$1-$2')
-    .slice(0, 14);
-}
+// Aguarda até que todo o conteúdo HTML da página seja carregado
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Seleção de Elementos DOM
+    const cpfInput = document.getElementById('cpf');
+    const form = document.getElementById('prontuario-form');
+    const btnLimpar = document.getElementById('btn-limpar');
 
-async function loadDB() {
-  try {
-    const res = await fetch('db.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('db.json não encontrado');
-    return await res.json();
-  } catch {
-    console.warn('Sem db.json local — usando fallback embutido');
-    return window.__DB_FALLBACK__;
-  }
-}
+    // 2. Função de Formatação do CPF
+    // Esta função formata o valor do input enquanto o usuário digita
+    function formatarCPF(value) {
+        // Limpa todos os caracteres que não são números
+        let cpf = value.replace(/\D/g, ''); 
 
-// Fallback se abrir o HTML direto
-window.__DB_FALLBACK__ = {
-  gestantes: [
-    {
-      id: 1,
-      cpf: '123.456.789-00',
-      nome: 'Maria das Dores Almeida',
-      idade: 29,
-      email: 'maria.almeida@portalmae.com',
-      telefone: '(31) 98888-1111',
-      historicoMedico: [
-        { data: '2025-03-10', descricao: 'Consulta pré-natal - 2º trimestre', resultado: 'Gestação saudável, pressão normal.' },
-        { data: '2025-05-22', descricao: 'Exame de ultrassonografia', resultado: 'Bebê com desenvolvimento normal, sem alterações.' }
-      ]
-    },
-    {
-      id: 2,
-      cpf: '987.654.321-11',
-      nome: 'Juliana Ribeiro Costa',
-      idade: 32,
-      email: 'juliana.costa@portalmae.com',
-      telefone: '(31) 97777-2222',
-      historicoMedico: [
-        { data: '2025-01-15', descricao: 'Exame de sangue completo', resultado: 'Hemoglobina dentro da normalidade.' }
-      ]
+        // Aplica a máscara: 000.000.000-00
+        // (1) Adiciona um ponto após o 3º dígito
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
+        // (2) Adiciona um ponto após o 6º dígito
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
+        // (3) Adiciona um hífen após o 9º dígito
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
+
+        // Retorna o valor formatado, garantindo que não exceda 14 caracteres (incluindo pontos/hífen)
+        return cpf;
     }
-  ],
-  medicos: [{ id: 1, nome: 'Dra. Helena Vasconcelos', especialidade: 'Ginecologia e Obstetrícia', crm: 'MG12345', email: 'helena.vasconcelos@portalmae.com' }]
-};
 
-document.getElementById('year').textContent = new Date().getFullYear();
+    // 3. Listener para Formatação Automática ao Digitar
+    cpfInput.addEventListener('input', function(event) {
+        // Aplica a função de formatação no valor atual do input
+        event.target.value = formatarCPF(event.target.value);
+    });
 
-const cpfInput = document.getElementById('cpf');
-cpfInput.addEventListener('input', (e) => e.target.value = maskCPF(e.target.value));
+    // 4. Listener para o Botão "Limpar"
+    btnLimpar.addEventListener('click', function() {
+        // Limpa o valor do campo de input do CPF
+        cpfInput.value = '';
+        // Opcional: Coloca o foco de volta no campo
+        cpfInput.focus();
+    });
 
-document.getElementById('busca-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const cpf = cpfInput.value.trim();
-  const container = document.getElementById('resultado');
-  container.innerHTML = '';
+    // 5. Listener para o Envio do Formulário ("Buscar")
+    form.addEventListener('submit', function(event) {
+        // Previne o comportamento padrão de envio do formulário (que recarregaria a página)
+        event.preventDefault(); 
 
-  if (cpf.length !== 14) {
-    container.innerHTML = '<p class="empty">Informe um CPF completo no formato 000.000.000-00.</p>';
-    return;
-  }
+        // Obtém o valor do CPF (agora formatado)
+        const cpfFormatado = cpfInput.value;
 
-  const db = await loadDB();
-  const gestante = db.gestantes.find(g => g.cpf === cpf);
+        // Limpa a formatação para obter apenas os 11 dígitos para a busca
+        const cpfApenasDigitos = cpfFormatado.replace(/\D/g, ''); 
 
-  if (!gestante) {
-    container.innerHTML = '<p class="empty">Nenhum registro encontrado para este CPF.</p>';
-    return;
-  }
+        // Verifica se o CPF tem 11 dígitos (validação simples)
+        if (cpfApenasDigitos.length === 11) {
+            console.log(`CPF Válido (para busca): ${cpfApenasDigitos}`);
+            
+            // SIMULAÇÃO DO REDIRECIONAMENTO
+            // Em um ambiente de produção, aqui você faria uma chamada API para validar o CPF 
+            // e então redirecionaria para a página de prontuários.
+            const urlRedirecionamento = `prontuarios.html?cpf=${cpfApenasDigitos}`;
+            
+            // Exemplo de como redirecionar
+            // window.location.href = urlRedirecionamento; 
+            
+            // Log para simular o redirecionamento sem sair da página
+            console.log(`Redirecionando para: ${urlRedirecionamento}`);
+            alert(`Buscando prontuário para o CPF: ${cpfFormatado}`);
 
-  const historico = [...gestante.historicoMedico].sort((a,b)=> a.data.localeCompare(b.data));
-
-  container.innerHTML = `
-    <article class="result-card" role="region" aria-live="polite">
-      <h2>${gestante.nome} <span class="badge">CPF verificado</span></h2>
-      <p class="meta">Idade: <strong>${gestante.idade}</strong> • Email: <a href="mailto:${gestante.email}">${gestante.email}</a> • Tel: ${gestante.telefone}</p>
-      <div class="hist">
-        <h3>Histórico médico</h3>
-        <ul>
-          ${historico.map(h => `<li><strong>${h.data}</strong> — ${h.descricao}. <em>${h.resultado}</em></li>`).join('')}
-        </ul>
-      </div>
-      <details style="margin-top:12px">
-        <summary>Aviso de privacidade (LGPD)</summary>
-        <p class="empty">Dados exibidos apenas para fins acadêmicos. Em produção: autenticação, autorização, consentimento e mascarar identificadores.</p>
-      </details>
-    </article>
-  `;
-});
-
-document.getElementById('busca-form').addEventListener('reset', () => {
-  document.getElementById('resultado').innerHTML = '';
-  cpfInput.focus();
+        } else {
+            // Caso o campo esteja incompleto
+            alert('Por favor, digite um CPF válido com 11 dígitos.');
+            cpfInput.focus();
+        }
+    });
 });
