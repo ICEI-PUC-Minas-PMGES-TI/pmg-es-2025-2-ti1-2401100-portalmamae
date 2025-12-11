@@ -192,6 +192,25 @@ input[type="radio"]:checked + .custom-radio::after {
     width: 100%; 
 }
 
+/* --- Estilo do Botão de Envio --- */
+.submit-button {
+    background-color: #45a049; /* Cor rosa principal */
+    color: #ffffff; /* Texto escuro */
+    border: 2px solid #38803c; /* Borda um pouco mais escura */
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa a largura total do formulário */
+    margin-top: 10px; /* Espaço em cima */
+}
+
+.submit-button:hover {
+    background-color: #237727; /* Escurece um pouco ao passar o mouse */
+}
+
 .footer p {
     font-size: 14px;
     color: #333;

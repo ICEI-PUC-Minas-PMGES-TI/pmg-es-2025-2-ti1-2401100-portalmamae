@@ -57,27 +57,66 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Exemplo de como você poderia coletar os dados ao enviar (opcional)
-    /*
+    document.addEventListener('DOMContentLoaded', function() {
+    // ... (Código de formatação de data e radio buttons aqui) ...
+
     const complaintForm = document.getElementById('complaintForm');
+
+    // Listener para quando o botão 'Enviar Denúncia' for clicado
     complaintForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Impede o envio padrão do formulário
         
-        const local = dataInput.value;
-        const data = dataInput.value;
+        // 1. IMPEDE o envio padrão do formulário (evita recarregar a página)
+        e.preventDefault(); 
+        
+        // 2. COLETAR os dados
+        const local = document.getElementById('local').value;
+        const data = document.getElementById('data').value;
         const anonima = document.querySelector('input[name="anonima"]:checked').value;
         const detalhes = document.getElementById('detalhes').value;
+        
+        // 3. VALIDAÇÃO SIMPLES (Exemplo: verifica se os campos principais estão vazios)
+        if (!local || !data || !detalhes) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return; // Interrompe o processo se a validação falhar
+        }
 
-        console.log('Dados da Denúncia:', {
+        const denunciaData = {
             local,
             data,
-            anonima: anonima === 'sim' ? 'Sim' : 'Não',
+            anonima: anonima === 'sim', // Salva como booleano (true/false)
             detalhes
-        });
+        };
 
-        // Aqui você enviaria os dados para o servidor (backend)
-        alert('Denúncia enviada com sucesso! (Verifique o console para os dados)');
-        this.reset(); // Limpa o formulário
+        console.log('Dados prontos para envio:', denunciaData);
+
+        // 4. ENVIAR os dados para o servidor (Backend)
+        // **ATENÇÃO:** Você precisa mudar o URL abaixo para o endereço do seu servidor!
+        /*
+        fetch('/api/denuncias/enviar', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(denunciaData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // 5. DAR FEEDBACK
+            alert('Denúncia enviada com sucesso! Obrigado pelo seu relato.');
+            complaintForm.reset(); // Limpa o formulário após o sucesso
+        })
+        .catch((error) => {
+            console.error('Erro ao enviar a denúncia:', error);
+            alert('Ocorreu um erro ao enviar a denúncia. Tente novamente mais tarde.');
+        });
+        */
+
+        // Por enquanto, sem o backend, vamos apenas simular o sucesso
+        alert('Denúncia enviada com sucesso! (Dados no console.log)');
+        complaintForm.reset();
     });
-    */
+
+    // ... (Seu código de formatação de data deve vir aqui, no início do DOMContentLoaded) ...
+    // ...
+});
 });
