@@ -1,0 +1,224 @@
+/* Definições globais e reset básico */
+:root {
+    --primary-color: #f49b9b; /* Rosa claro usado no header e footer */
+    --text-color: #333;
+    --placeholder-color: #aaa;
+    --input-bg-color: #eaeaea; /* Fundo cinza claro para inputs */
+    --radio-active-color: #4CAF50; /* Cor verde para rádio ativo */
+    --radio-border-color: #999;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+    color: var(--text-color);
+}
+
+body {
+    background-color: #fff; 
+    /* Garante que o body ocupe a altura mínima da viewport para empurrar o footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+/* --- 1. Cabeçalho (Header) --- */
+.header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333; 
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+/* --- 2. Conteúdo Principal (Main) --- */
+.main-content {
+    padding: 40px 0;
+    /* Permite que o conteúdo principal cresça para preencher o espaço, empurrando o footer para baixo */
+    flex-grow: 1; 
+}
+
+.form-container {
+    display: flex;
+    gap: 40px; 
+    align-items: flex-start; 
+}
+
+.complaint-form-section {
+    flex: 2; 
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* --- Estilo dos Elementos do Formulário (Sem Alterações) --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: var(--input-bg-color);
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical; 
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1; 
+}
+
+#detalhes {
+    background-color: #e0e0e0; 
+    min-height: 150px; 
+}
+
+/* --- Estilo dos Radio Buttons (Sem Alterações) --- */
+.radio-options {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer; 
+    user-select: none; 
+}
+
+input[type="radio"] {
+    position: absolute; 
+    opacity: 0; 
+    width: 0;
+    height: 0;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--radio-border-color);
+    border-radius: 50%; 
+    margin-right: 8px;
+    position: relative;
+    transition: all 0.2s ease-in-out; 
+}
+
+input[type="radio"]:checked + .custom-radio {
+    border-color: var(--radio-active-color); 
+    background-color: var(--radio-active-color); 
+}
+
+input[type="radio"]:checked + .custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white; 
+    transform: translate(-50%, -50%); 
+}
+
+/* --- Ajustes na Ilustração --- */
+.illustration-aside {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px; 
+}
+
+.illustration-aside img {
+    /* Tornando o ícone um pouco maior */
+    width: 150px; 
+    height: auto;
+    max-width: 100%;
+    
+    /* REMOÇÃO do contorno para que a imagem/ícone fique limpa */
+    border: none; 
+    padding: 0;
+    border-radius: 0;
+}
+
+
+/* --- 3. Rodapé (Footer) CORRIGIDO --- */
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+    /* Removido o margin-top fixo, pois o flex-grow do main fará o espaçamento */
+    /* Garante que o rodapé ocupe a largura total e não se mova */
+    width: 100%; 
+}
+
+.footer p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* --- Responsividade (Para telas menores) --- */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin: 0 10px; 
+    }
+
+    .form-container {
+        flex-direction: column; 
+    }
+
+    .illustration-aside {
+        order: -1; 
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+}
