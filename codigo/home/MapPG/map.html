@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Mamãe</title>
+        <link rel="stylesheet" href="map.css">
+    </head>
+    <body>
+        <div class="container">
+            <!--Cabeçalho-->
+            <header>
+                <h1>Portal Mamãe</h1>
+
+                <!--link de paginas-->   
+                <div class="links" id="links"></div>
+                <a href="/codigo/home/home.html" class="home-link">Home</a>
+                <a href="/codigo/gestante/portalG/portalG.html" class="home-link">Portal Gestante</a>
+                <a href="/codigo/gestante/cadastroG/casdastro.html">Cadastrar/Entrar</a>
+            </header>
+
+            <section>
+                <!--formulário de busca--> 
+                <div class="form-container">
+                    <form id="formMamae">
+                    <h1>Confira as Unidades próximas a você</h1>
+
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" placeholder="Ex: MG">
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Ex: Belo Horizonte">
+
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" placeholder="Ex: Centro">
+
+                    <button type="submit">Buscar</button>
+                    </form>
+
+                    <div id="map"></div>
+                </div>
+            </section>
+
+                <!-- Google Maps API -->
+                <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzOr03JOdz5dioxkEh5y7e85fStOxzYk&callback=initMap"></script>
+                <script src="map.js"></script>
+    </body>
+
+            <!--rodapé-->
+            <footer>
+                <p>www.portalmamae.com.br © 2025</p>
+            </footer>
+</html>

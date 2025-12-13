@@ -1,0 +1,167 @@
+/* CSS da parte de cadastro*/
+/* Estilos CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #f7a0a0;
+    /* Removido height: 50px para evitar quebra de layout */
+    padding: 15px 20px; /* Ajuste o padding para dar espaço */
+    color: black;
+    text-align: left;
+    position: relative;
+    
+    /* 🌟 NOVO: Usando Flexbox para alinhar <h1> e .home-link */
+    display: flex;
+    justify-content: space-between; /* Mantém <h1> à esquerda e o link à direita */
+    align-items: center;
+}
+
+header h1 {
+    color: black;
+    margin: 0;
+    /* Removido padding-left: 20px, pois o padding já está no header */
+    font-size: 24px;
+}
+
+/* REMOVIDO: Regras de position: absolute para o .home-link 
+   Isso era o que estava mais bagunçando o layout do cabeçalho
+   Ajustei para que ele funcione no fluxo normal do Flexbox */
+header .home-link {
+    /* position: absolute; - REMOVIDO */
+    /* right: 20px; - REMOVIDO */
+    /* top: 50%; - REMOVIDO */
+    /* transform: translateY(-50%); - REMOVIDO */
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    /* Se precisar de espaço extra, use margin-right */
+}
+
+/* ----------------------------------------------------- */
+/*  NOVO: Estilos para o Prompt de Login */
+/* ----------------------------------------------------- */
+.login-prompt {
+    text-align: center; 
+    margin: 20px auto; /* Centraliza a div e adiciona margem superior/inferior */
+    font-size: 1.1em; 
+    padding: 10px 0; /* Adicione padding para dar um respiro visual */
+}
+
+.login-prompt span {
+    color: #333; 
+}
+
+.login-link {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+
+.login-link:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+/* ----------------------------------------------------- */
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 80px; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* ... (O restante do CSS do formulário é o mesmo) ... */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #38761d; 
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.radio-input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: background-color 0.3s; 
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.radio-option {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio-input-field {
+    flex-grow: 1; 
+    margin-left: 10px;
+    padding: 8px;
+}
+
+.radio-input-field:disabled {
+    background-color: #f0f0f0; 
+    cursor: not-allowed;
+}
+
+
+.button-concluir {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin: 30px auto 0;
+    background-color: #38761d; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button-concluir:hover {
+    background-color: #275d15;
+}
+
+footer {
+    background-color: #f7a0a0;
+    color:black;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}

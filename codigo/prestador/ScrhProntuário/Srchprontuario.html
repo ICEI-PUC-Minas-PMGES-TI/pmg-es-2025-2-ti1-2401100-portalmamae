@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Mamae - Pesquisa de Prontuário</title>
+    <link rel="stylesheet" href="Srchprontuario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="portal-title">Portal Mamae</h1>
+            <nav class="main-nav">
+                <a href="#" class="nav-link">Página Prestador</a>
+                <a href="#" class="nav-link">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container search-section">
+            
+            <h2 class="section-title">Pesquisa de prontuário</h2>
+
+            <div class="search-flex-container">
+                
+                <div class="search-form-column">
+                    <form id="prontuario-form">
+                        <label for="cpf" class="label-cpf">CPF da gestante:</label>
+                        <input 
+                            type="text" 
+                            id="cpf" 
+                            name="cpf" 
+                            placeholder="000.000.000-00" 
+                            maxlength="14" 
+                            required
+                        >
+                        
+                        <div class="buttons-container">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                            <button type="button" id="btn-limpar" class="btn btn-secondary">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="search-image-column">
+                  <img src="/codigo/imagens/iconeProntuario.png" alt="prontuario">
+                                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="copyright">www.portalmamae.com.br ©2025</p>
+        </div>
+    </footer>
+
+    <script src="Srchprontuario.js"></script>
+
+</body>
+</html>
