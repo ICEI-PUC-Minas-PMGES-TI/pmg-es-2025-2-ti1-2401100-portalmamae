@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background-color: #AEEEEE;
+    padding: 25px 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.top-bar nav a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.main-container {
+    display: flex;
+    padding: 30px 50px;
+    gap: 40px;
+    flex: 1;
+}
+
+.left-panel {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.legend-area {
+    margin-bottom: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #2E7D32;
+    font-weight: 500;
+}
+
+.dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.dot.gray { background-color: #D3D3D3; }
+.dot.pink { background-color: #FFB6C1; }
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.form-section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-section h3, 
+#tituloLista {
+    font-size: 16px;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.form-section input, 
+.form-section select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-section .row {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-save {
+    width: 100%;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-save:hover {
+    background-color: #1B5E20;
+}
+
+.appointments-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.event-card {
+    background: white;
+    padding: 10px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.event-header {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.event-details {
+    color: #757575;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-note {
+    margin-top: auto;
+    color: #4CAF50;
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+.calendar-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.calendar-header {
+    background-color: #6FA3CF;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.calendar-header h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.weekdays-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #6FA3CF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #6FA3CF;
+    gap: 1px;
+    border: 1px solid #6FA3CF;
+}
+
+.day-cell {
+    background-color: #7FB0D6;
+    min-height: 100px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.day-cell:hover {
+    background-color: #6FA3CF;
+}
+
+.day-cell.today-real {
+    border: 2px solid #2E7D32;
+    background-color: #8cc4e8;
+}
+
+.day-cell.selected {
+    background-color: #5D92C0 !important;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.day-cell.other-month {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.day-dots-container {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.mini-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.mini-dot.consulta { background-color: #D3D3D3; }
+.mini-dot.procedimento { background-color: #FFB6C1; }
+
+.bottom-bar {
+    background-color: #AEEEEE;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #333;
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .left-panel {
+        width: 100%;
+        order: 2;
+    }
+
+    .top-bar {
+        padding: 15px 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-bar nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .calendar-header h2 {
+        font-size: 18px;
+    }
+
+    .weekdays-grid {
+        font-size: 9px;
+    }
+
+    .day-cell {
+        min-height: 60px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .mini-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .day-dots-container {
+        bottom: 4px;
+        right: 4px;
+        gap: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar h1 {
+        font-size: 20px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .weekdays-grid div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

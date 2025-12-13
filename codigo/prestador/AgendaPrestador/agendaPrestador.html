@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas e Exames</title>
+    <link rel="stylesheet" href="agendaPrestador.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="header-content">
+            <h1>Consultas e Exames</h1>
+            <nav>
+                <a href="/codigo/prestador/PortalP/">Portal Prestador</a>
+                <a href="/codigo/home/home.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <aside class="left-panel">
+            
+            <div class="legend-area">
+                <div class="legend-item">
+                    <span class="dot gray"></span> Consultas
+                </div>
+                <div class="legend-item">
+                    <span class="dot pink"></span> Procedimentos
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="form-section">
+                <h3>Agendar Novo</h3>
+                <input type="text" id="inputNome" placeholder="Nome do Paciente" required>
+                <div class="row">
+                    <input type="date" id="inputData" required>
+                    <input type="time" id="inputHora" required>
+                </div>
+                <select id="inputTipo">
+                    <option value="consulta">Consulta</option>
+                    <option value="procedimento">Procedimento</option>
+                </select>
+                <input type="text" id="inputLocal" placeholder="Descrição do Procedimento" value="">
+                <button onclick="salvarAgendamento()" class="btn-save">Confirmar</button>
+            </div>
+
+            <hr class="divider">
+
+            <h3 id="tituloLista">Próximos Eventos</h3>
+            <div id="listaAgendamentos" class="appointments-list">
+                </div>
+
+            <div class="footer-note">
+                Nota: O tempo de tolerância para atrasos é de 10 min.
+            </div>
+        </aside>
+
+        <main class="calendar-panel">
+            <div class="calendar-header">
+                <button onclick="mudarMes(-1)">&#10094;</button> 
+                <h2 id="mesAnoDisplay">Setembro de 2025</h2>
+                <button onclick="mudarMes(1)">&#10095;</button>
+            </div>
+
+            <div class="weekdays-grid">
+                <div>DOMINGO</div>
+                <div>SEGUNDA</div>
+                <div>TERÇA</div>
+                <div>QUARTA</div>
+                <div>QUINTA</div>
+                <div>SEXTA</div>
+                <div>SÁBADO</div>
+            </div>
+
+            <div id="calendarGrid" class="days-grid">
+                </div>
+        </main>
+    </div>
+
+    <footer class="bottom-bar">
+        <p>www.portalmamae.com.br © 2025</p>
+    </footer>
+
+    <script src="agendaPrestador.js"></script>
+</body>
+</html>
