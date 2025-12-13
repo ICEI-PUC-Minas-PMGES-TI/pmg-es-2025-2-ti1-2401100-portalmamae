@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="denuncia.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header class="header">
@@ -21,10 +23,10 @@
 
     <main class="main-content">
         <div class="container form-container">
-            
+
             <section class="complaint-form-section">
                 <h2 class="section-title">Denúncia</h2>
-                
+
                 <form id="complaintForm">
                     <div class="form-group">
                         <label for="local">Local do ocorrido:</label>
@@ -39,13 +41,13 @@
                     <div class="form-group anonymous-group">
                         <label>Denúncia anônima?</label>
                         <div class="radio-options">
-                            
+
                             <label class="radio-label">
                                 <input type="radio" name="anonima" value="sim" checked>
                                 <span class="custom-radio"></span>
                                 Sim
                             </label>
-                            
+
                             <label class="radio-label">
                                 <input type="radio" name="anonima" value="nao">
                                 <span class="custom-radio"></span>
@@ -56,20 +58,27 @@
 
                     <div class="form-group">
                         <label for="detalhes">O que aconteceu?:</label>
-                        <textarea id="detalhes" name="detalhes" rows="8" placeholder="Detalhes da denúncia..." required></textarea>
+                        <textarea id="detalhes" name="detalhes" rows="8" placeholder="Detalhes da denúncia..."
+                            required></textarea>
                     </div>
-                    
-                    
+
+
                     <div class="form-group button-group">
-                         <button type="submit" class="submit-button">Enviar Denúncia</button>
+                        <button type="submit" class="submit-button">Enviar Denúncia</button>
                     </div>
-                    
-                    </form>
+                </form>
+                <section class="complaint-form-section">
+                    <h2 class="section-title">Minhas denúncias</h2>
+                    <div id="lista-denuncias">
+                        <p>Nenhuma denúncia encontrada.</p>
+                    </div>
+                </section>
+
             </section>
-            
+
             <aside class="illustration-aside">
-                
-                            </aside>
+
+            </aside>
 
         </div>
     </main>
@@ -82,4 +91,5 @@
 
     <script src="denuncia.js"></script>
 </body>
+
 </html>

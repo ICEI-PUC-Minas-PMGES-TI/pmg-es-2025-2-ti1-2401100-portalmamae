@@ -56,6 +56,7 @@
       "telefone": "(31) 98888-1111",
       "email": "maria.almeida@portalmae.com",
       "idade": 29,
+      "perfil": "imagem",
       "admin": false
     },
     {
@@ -66,5 +67,19 @@
       "email": "medico@abc.com",
       "admin": false
     }
-  ]
+  ],
+  "denuncias": [],
+  "prontuarios": [
+    {
+      "id": "fadb",
+      "cpf": "22233344455",
+      "nome": "Andreia",
+      "idade": "44",
+      "motivo": "Dores de cabeça",
+      "historia": "A paciente relata dores de cabeça des do inicio do dia",
+      "exames": "ultrassom",
+      "diagnostico": "enxaqueca",
+      "dataRegistro": "2025-12-13T21:01:32.056Z"
+    }
+  ] 
 }
