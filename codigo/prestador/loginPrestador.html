@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginPrestador.css">
+    <title>Login Prestador Portal Mamãe</title>
+</head>
+<body>
+    <header>
+        <h1>PortalMamae</h1>
+        <a href="/codigo/home/home.html" class="home-link">Home</a>
+    </header>
+
+    <div class="main-content">
+        <h2>Entrar como prestador</h2>
+
+        <div class="login-card">
+            <div class="user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+            </div>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14">
+                </div>
+                
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <div class="password-field">
+                        <input type="password" id="senha" name="senha" placeholder="Ex: Suasenha123..." required>
+                        <span class="toggle-password" id="togglePassword">
+                            <img src="/codigo/imagens/canva-eye-icon-MADBWc-STUE.png" alt="Mostrar/Ocultar Senha" class="eye-icon">
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        www.portalmamae.com.br © 2025
+    </footer>
+
+    <script src="loginPrestador.js"></script>
+</body>
+</html>
