@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             targetInput.disabled = true;
         }
         
-        // --- Lógica de Event Listener (aq "Event Listener" é oq um mecanismo que espera que um determinado evento ocorra em um elemento específico da página, no caso o botão seja habilitado) ---
+        // --- Lógica de Event Listener ---
         radios.forEach(radio => {
             radio.addEventListener('change', function() {
                 const targetInputId = container.getAttribute('data-target-input');
@@ -46,4 +46,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         });
     });
+
+    // ====================================================================
+    // NOVO CÓDIGO: Redirecionamento ao clicar no botão "Concluir"
+    // ====================================================================
+    const form = document.getElementById('cadastroForm');
+
+    // Verifica se o formulário existe antes de adicionar o listener
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            // 1. Previne o envio padrão do formulário (que recarregaria a página)
+            event.preventDefault(); 
+            
+            // ⚠️ Aqui é onde você colocaria sua lógica de validação/envio de dados 
+            // (ex: verificar se a senha e a confirmação de senha são iguais)
+            
+            // Se a validação for bem-sucedida, redireciona:
+            
+            // 2. Redireciona o usuário para a página Home
+            window.location.href = '/codigo/home/home.html';
+        });
+    }
+    // ====================================================================
+
 });
