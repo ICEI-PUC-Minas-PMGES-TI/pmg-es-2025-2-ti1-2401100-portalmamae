@@ -10,12 +10,16 @@
 <body>
     <header>
         <h1>Portal Mamãe</h1>
-        <a href="#" class="home-link">Home</a>
+        <a href="/codigo/home/home.html" class="home-link">Home</a>
     </header>
+
+    <div class="login-prompt">
+        <span>Já possui cadastro? </span>
+        <a href="#" class="login-link">Logar agora</a>
+    </div>
 
     <div class="container">
         <form id="cadastroForm">
-             <!--Onde o usuario preenche com seus próprios dados (nome,data de nascimento, CPF, email, telefone e senha)-->
             <div class="form-group">
                 <label for="nome">Nome completo</label>
                 <input type="text" id="nome" name="nome" required>
@@ -50,8 +54,6 @@
                 <label for="confirmaSenha">Confirme sua senha</label>
                 <input type="password" id="confirmaSenha" name="confirmaSenha" required>
             </div>
-
-            <!--Aqui vem a area onde o usuário seleciona entre sim e não, após preencher seus dados (ao marcar sim preenche o campo de texto)-->
 
             <div class="form-group">
                 <label>Possui doenças transmissíveis? Se sim, qual?</label>
