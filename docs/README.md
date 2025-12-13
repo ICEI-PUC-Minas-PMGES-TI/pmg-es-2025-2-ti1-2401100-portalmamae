@@ -483,13 +483,14 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 As referências utilizadas no trabalho foram:
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+* **CarnaLivre - Hospedagem:** Repositório GitHub utilizado como base de estudo para a estrutura do projeto. Disponível em: [GitHub](https://github.com/Joao-Prado0/CarnaLivre-Hospedagem).
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
-> **Orientações**:
->
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+* **Doctoralia:** Plataforma utilizada como referência para o fluxo de busca de profissionais e agendamento de consultas. Disponível em: [doctoralia.com.br](https://www.doctoralia.com.br/).
+
+* **Rede Hospitalar de Belo Horizonte (PBH):** Fonte oficial de dados sobre a rede de atenção à saúde e locais de atendimento. Disponível em: [Portal PBH](https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/rede-hospitalar).
+
+* **Caderneta da Gestante (Ministério da Saúde):** A principal referência para cronogramas de consultas e exames no SUS. Disponível em: [Cardeneta da Gestante](https://www.mds.gov.br/webarquivos/arquivo/crianca_feliz/Treinamento_Multiplicadores_Coordenadores/Caderneta-Gest-Internet(1).pdf).
+
+* **FEBRASGO** (Federação Brasileira das Associações de Ginecologia e Obstetrícia). Calendário de consultas e exames.
+
+* SCHWABER, K.; SUTHERLAND, J. **O Guia do Scrum: As Regras do Jogo.** Disponível em: [scrumguides](scrumguides.org).
