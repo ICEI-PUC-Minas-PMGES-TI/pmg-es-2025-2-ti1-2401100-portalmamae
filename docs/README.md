@@ -13,7 +13,7 @@ Informações básicas do projeto.
   * [Emanuelly Oliveira Arruda Cabral](https://github.com/Manu-Olliver)
   * [Davi Hermidas Lage Brandão](https://github.com/hermidas-wadac)
   * [Bernardo Caetano Rocha de Lima](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Victor Gabriel Soares Ananias](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Victor Gabriel Soares Ananias](https://github.com/victorVT03)
   * [Pedro Henrique Dias Pereira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
 
 A documentação do projeto é estruturada da seguinte forma:
@@ -38,14 +38,17 @@ O principal problema que o Portal Mamãe busca resolver é a fragmentação e le
 
   * **Atraso na Detecção de Risco:** A falta de acesso rápido ao histórico e aos resultados de exames pela equipe médica compromete a identificação precoce de gestações de alto risco.
 
+    * **Difícil acesso a exames e informações médicas:** A ausência de um local unificado para armazenar exames e resultados obriga a gestante a acessar múltiplas plataformas de laboratórios ou a se deslocar até unidades de saúde para reunir informações por conta própria, aumentando o risco de perda, esquecimento ou desorganização dos dados.
+
   * **Desperdício de Tempo e Sobrecarga:** Pacientes perdem tempo com deslocamentos desnecessários e os médicos enfrentam burocracia para organizar agendamentos e acessar informações.
 
   * **Falta de Personalização e Confiança:** A gestante não tem garantia de atendimento em locais próximos ou informações prévias sobre o profissional, afetando a segurança e confiança na consulta.
 
+  * **Falta de informações básicas sobre gestação:** Muitas gestantes, especialmente mães jovens ou de primeira viagem, não possuem acesso a informações sobre os cuidados básicos necessários durante a gravidez.
 
 ## Objetivos
 
-A finalidade do Portal Mamãe é ser um software especializado no acompanhamento de gestantes no sistema público de saúde.
+A finalidade do Portal Mamãe é ser um software especializado no acompanhamento de gestantes no sistema público de saúde, oferecendo suporte e informação.
 
 Nesse contexto, os objetivos específicos são:
 
