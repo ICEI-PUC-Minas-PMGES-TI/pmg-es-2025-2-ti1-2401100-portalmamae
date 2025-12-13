@@ -1,62 +1,75 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cpfInput = document.getElementById('cpf');
-    const senhaInput = document.getElementById('senha');
-    const togglePassword = document.getElementById('togglePassword');
-    const loginForm = document.getElementById('loginForm');
+document.addEventListener("DOMContentLoaded", () => {
+    const cpfInput = document.getElementById("cpf");
+    const senhaInput = document.getElementById("senha");
+    const togglePassword = document.getElementById("togglePassword");
+    const loginForm = document.getElementById("loginForm");
 
-    // 1. Formatação de CPF
-    cpfInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
-        
-        // Aplica a máscara: 000.000.000-00
-        if (value.length > 3) {
-            value = value.substring(0, 3) + '.' + value.substring(3);
-        }
-        if (value.length > 7) {
-            value = value.substring(0, 7) + '.' + value.substring(7);
-        }
-        if (value.length > 11) {
-            value = value.substring(0, 11) + '-' + value.substring(11);
-        }
+    // ===============================
+    // FORMATAÇÃO DE CPF
+    // ===============================
+    cpfInput.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, "");
+
+        if (value.length > 3) value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        if (value.length > 6) value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        if (value.length > 9) value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
         e.target.value = value;
     });
 
-    // 2. Toggle Mostrar/Ocultar Senha
-    togglePassword.addEventListener('click', () => {
-        // Alterna entre 'password' e 'text'
-        const type = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        senhaInput.setAttribute('type', type);
-        
-        // Opcional: Mudar o ícone do olho se você tiver duas imagens (aberto/fechado)
-        const eyeIcon = togglePassword.querySelector('.eye-icon');
-        if (type === 'text') {
-            // Se estiver como texto, você pode mudar o src da imagem aqui:
-            // eyeIcon.src = 'eye-open-icon.png';
-            eyeIcon.style.opacity = '1.0'; // Deixa o olho mais destacado
-        } else {
-            // eyeIcon.src = 'eye-closed-icon.png';
-            eyeIcon.style.opacity = '0.7'; // Retorna ao estado normal
-        }
+    // ===============================
+    // MOSTRAR / OCULTAR SENHA
+    // ===============================
+    togglePassword.addEventListener("click", () => {
+        const type = senhaInput.type === "password" ? "text" : "password";
+        senhaInput.type = type;
     });
 
-    // 3. Redirecionamento (Ao clicar em Entrar)
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); 
-        
-        const cpf = cpfInput.value;
+    // ===============================
+    // LOGIN REAL (db.json)
+    // ===============================
+    loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        if (cpf.length === 14) { // Verifica se o CPF está completo
-            // 🚀 AÇÃO CRÍTICA: Salva o CPF no Local Storage para ser lido na próxima página
-            localStorage.setItem('gestante_cpf_logado', cpf);
-            
-            alert('Login bem-sucedido! Redirecionando para a área da Gestante...');
-            
-            // ATENÇÃO: Use o nome correto do arquivo (provavelmente 'prestador.html')
-            window.location.href = '/codigo/gestante/portalG/portalG.html'; 
-            
-        } else {
-            alert('Por favor, digite um CPF completo.');
+        const cpfFormatado = cpfInput.value;
+        const senha = senhaInput.value;
+        const cpfLimpo = cpfFormatado.replace(/\D/g, "");
+
+        if (cpfLimpo.length !== 11 || !senha) {
+            alert("Preencha CPF e senha corretamente.");
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `http://localhost:3000/usuarios?cpf=${cpfFormatado}&senha=${senha}`
+            );
+
+            const usuarios = await response.json();
+
+            if (usuarios.length === 0) {
+                alert("❌ CPF ou senha inválidos.");
+                return;
+            }
+
+            const usuario = usuarios[0];
+
+            // 🔐 SALVA A GESTANTE LOGADA (PADRÃO ÚNICO)
+            localStorage.setItem(
+                "gestanteLogada",
+                JSON.stringify({
+                    id: usuario.id,
+                    cpf: cpfLimpo,
+                    nome: usuario.nome
+                })
+            );
+
+            alert("✅ Login realizado com sucesso!");
+            window.location.href = "/codigo/gestante/portalG/portalG.html";
+
+        } catch (error) {
+            console.error(error);
+            alert("Erro ao realizar login.");
         }
     });
 });

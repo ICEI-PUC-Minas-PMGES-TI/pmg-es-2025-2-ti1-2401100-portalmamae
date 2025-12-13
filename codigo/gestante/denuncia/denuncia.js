@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const gestanteLogada = JSON.parse(localStorage.getItem("gestanteLogada"));
 
     if (!gestanteLogada) {
-        alert("Gestante não autenticada.");
+        alert("⚠️ Gestante não autenticada. Você será redirecionada para o login.");
+        window.location.href = "/codigo/gestante/loginGestante/loginGestante.html";
         return;
     }
+
 
     // ===============================
     // FORMATAÇÃO DA DATA
