@@ -98,5 +98,5 @@ document.getElementById("formMamae").addEventListener("submit", function (event)
 
   limparFormulario();
 
-  window.location.href = "/codigo/agenda/agendaG.html";
+  window.location.href = "/codigo/gestante/agenda/agendaG.html";
 });

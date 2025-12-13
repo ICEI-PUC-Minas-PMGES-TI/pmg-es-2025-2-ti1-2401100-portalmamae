@@ -43,13 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Redirecionamento (Ao clicar em Entrar)
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(); 
-
-        // ⚠️ Nota: Em um ambiente real, a autenticação ocorreria aqui (AJAX/Fetch)
-        // e, se bem-sucedida, você salvaria as informações de login.
-
-        alert('Login bem-sucedido! Redirecionando para a próxima página...');
         
-        // Substitua 'proxima-pagina.html' pela URL real do portal logado
-        window.location.href = '/codigo/home/home.html'; 
+        const cpf = cpfInput.value;
+
+        if (cpf.length === 14) { // Verifica se o CPF está completo
+            // 🚀 AÇÃO CRÍTICA: Salva o CPF no Local Storage para ser lido na próxima página
+            localStorage.setItem('gestante_cpf_logado', cpf);
+            
+            alert('Login bem-sucedido! Redirecionando para a área da Gestante...');
+            
+            // ATENÇÃO: Use o nome correto do arquivo (provavelmente 'prestador.html')
+            window.location.href = '/codigo/gestante/portalG/portalG.html'; 
+            
+        } else {
+            alert('Por favor, digite um CPF completo.');
+        }
     });
 });

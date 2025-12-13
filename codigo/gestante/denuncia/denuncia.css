@@ -240,4 +240,12 @@ input[type="radio"]:checked + .custom-radio::after {
         padding-top: 0;
         margin-bottom: 20px;
     }
+    .denuncia-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
 }

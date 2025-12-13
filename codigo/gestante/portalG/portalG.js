@@ -24,12 +24,12 @@ const dados = {
         {
           "id": 4,
           "titulo": "Informações médicas e resultados de exames",
-          "link": "#"
+          "link": "/codigo/Rafael/exames/exames.html"
         },
         {
           "id": 5,
           "titulo": "Consultas e exames agendados",
-          "link": "#"
+          "link": "/codigo/gestante/agendaG/agendaG.html"
         }
         ]
     }
