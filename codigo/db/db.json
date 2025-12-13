@@ -61,11 +61,14 @@
     },
     {
       "id": "d4f5e6a1-2b3c-4d5e-8f9a-0b1c2d3e4f5g",
+      "cpf": "178.444.333-12",
+      "telefone": "(31) 97777-2222",
       "login": "medico",
       "senha": "123",
       "nome": "Médico Responsável",
       "email": "medico@abc.com",
-      "admin": false
+      "admin": false,
+      "endereco": "Não informado"
     }
   ],
   "denuncias": [],
@@ -81,5 +84,5 @@
       "diagnostico": "enxaqueca",
       "dataRegistro": "2025-12-13T21:01:32.056Z"
     }
-  ] 
+  ]
 }

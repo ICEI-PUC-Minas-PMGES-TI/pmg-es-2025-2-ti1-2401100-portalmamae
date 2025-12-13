@@ -4,51 +4,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const togglePassword = document.getElementById('togglePassword');
     const loginForm = document.getElementById('loginForm');
 
-    // 1. Formatação de CPF (mantida)
+    // ---------------- CPF MASK ----------------
     cpfInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, ''); 
-        
-        if (value.length > 3) {
-            value = value.substring(0, 3) + '.' + value.substring(3);
-        }
-        if (value.length > 7) {
-            value = value.substring(0, 7) + '.' + value.substring(7);
-        }
-        if (value.length > 11) {
-            value = value.substring(0, 11) + '-' + value.substring(11);
-        }
-
+        let value = e.target.value.replace(/\D/g, '');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
         e.target.value = value;
     });
 
-    // 2. Toggle Mostrar/Ocultar Senha (mantida)
-    if (togglePassword) {
-        togglePassword.addEventListener('click', () => {
-            const type = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            senhaInput.setAttribute('type', type);
-            
-            const eyeIcon = togglePassword.querySelector('.eye-icon');
-            eyeIcon.style.opacity = type === 'text' ? '1.0' : '0.7';
-        });
-    }
+    // ---------------- TOGGLE PASSWORD ----------------
+    togglePassword.addEventListener('click', () => {
+        const type = senhaInput.type === 'password' ? 'text' : 'password';
+        senhaInput.type = type;
+    });
 
-    // 3. Redirecionamento e Salvamento de CPF
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); 
-        
+    // ---------------- LOGIN ----------------
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
         const cpf = cpfInput.value;
+        const senha = senhaInput.value;
 
-        if (cpf.length === 14) { // Verifica se o CPF está completo
-            // 🚀 AÇÃO CRÍTICA: Salva o CPF no Local Storage para ser lido na próxima página
-            localStorage.setItem('prestador_cpf_logado', cpf);
-            
-            alert('Login bem-sucedido! Redirecionando para a área do Prestador...');
-            
-            // ATENÇÃO: Use o nome correto do arquivo (provavelmente 'prestador.html')
-            window.location.href = '/codigo/prestador/PortalP/prestador.html'; 
-            
-        } else {
-            alert('Por favor, digite um CPF completo.');
+        if (cpf.length !== 14) {
+            alert('Digite um CPF válido.');
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3000/usuarios');
+            const usuarios = await response.json();
+
+            // Procura prestador pelo CPF
+            const prestador = usuarios.find(u => u.cpf === cpf && u.admin === false);
+
+            if (!prestador) {
+                alert('CPF não cadastrado como prestador.');
+                return;
+            }
+
+            if (prestador.senha !== senha) {
+                alert('Senha incorreta.');
+                return;
+            }
+
+            // ✅ Login OK → salva dados do prestador
+            localStorage.setItem('prestador_logado', JSON.stringify(prestador));
+
+            alert('Login realizado com sucesso!');
+            window.location.href = '/codigo/prestador/PortalP/prestador.html';
+
+        } catch (error) {
+            console.error(error);
+            alert('Erro ao conectar com o servidor.');
         }
     });
 });

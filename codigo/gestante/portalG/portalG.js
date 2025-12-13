@@ -1,7 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // -------------------------------------------------------------
-    // Elementos da página
-    // -------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", async () => {
+
+    // -------------------------------------------------
+    // 1. VERIFICA AUTENTICAÇÃO
+    // -------------------------------------------------
+    const gestanteLogada = JSON.parse(localStorage.getItem("gestanteLogada"));
+
+    if (!gestanteLogada || !gestanteLogada.cpf) {
+        alert("Gestante não autenticada. Faça login novamente.");
+        window.location.href = "/codigo/gestante/loginGestante/loginGestante.html";
+        return;
+    }
+
+    const cpfLogado = gestanteLogada.cpf;
+
+    // -------------------------------------------------
+    // 2. ELEMENTOS DA TELA
+    // -------------------------------------------------
     const nomeInput = document.getElementById("nome");
     const socialInput = document.getElementById("social");
     const emailInput = document.getElementById("email");
@@ -12,109 +26,80 @@ document.addEventListener('DOMContentLoaded', () => {
     const enderecoSpan = document.getElementById("endereco");
     const linksDiv = document.getElementById("links");
 
-    // -------------------------------------------------------------
-    // DADOS DE SIMULAÇÃO DINÂMICA
-    // -------------------------------------------------------------
+    // -------------------------------------------------
+    // 3. BUSCA DADOS REAIS NO BACKEND
+    // -------------------------------------------------
+    try {
+        const response = await fetch(
+            `http://localhost:3000/usuarios?cpf=${cpfLogado}`
+        );
 
-    const MEDICOS_APOIO = ["Dra. Helena Mendes", "Dr. Marcos Vinicius", "Dra. Juliana Ferreira", "Dr.(a) Alexandra Martins"];
-    
-    // Hospitais públicos/maternidades de BH (como solicitado)
-    const HOSPITAIS_PARTO = [
-        { nome: "Maternidade Odete Valadares", endereco: "R. do Rosário, 150 - Padre Eustáquio, BH, CEP: 30720-050" },
-        { nome: "Hospital Sofia Feldman", endereco: "R. Antônio Bandeira, 1060 - Tupi, BH, CEP: 31840-360" },
-        { nome: "Hospital das Clínicas da UFMG", endereco: "Av. Prof. Alfredo Balena, 110 - Santa Efigênia, BH, CEP: 30130-100" },
-        { nome: "Hospital de BH", endereco: "Rua alguma coisa, 0000, BH, CEP: 00000-000" } // Incluindo o seu exemplo
-    ];
+        const usuarios = await response.json();
 
-    const LINKS_GESTANTE = [
-        { "titulo": "Informações médicas e resultados de exames", "link": "#" },
-        { "titulo": "Consultas e exames agendados", "link": "#" }
-    ];
+        if (usuarios.length === 0) {
+            alert("Gestante não encontrada no sistema.");
+            window.location.href = "/codigo/gestante/loginGestante/loginGestante.html";
+            return;
+        }
 
-    const NOMES_COMUNS = [
-        ["Maria", "Clara", "Silva"],
-        ["Amanda", "Lopes", "Ferreira"],
-        ["Janaina", "Soares", "Cunha"] // Incluindo seu exemplo para o hash ser consistente
-    ];
+        const gestante = usuarios[0];
 
-    function generateGestanteData(cpf) {
-        const hash = parseInt(cpf.replace(/\D/g, '').substring(0, 2) || '00') % NOMES_COMUNS.length;
-        const [primeiroNome, segundoNome, sobrenome] = NOMES_COMUNS[hash];
-        
-        const nomeCompleto = `${primeiroNome} ${segundoNome} ${sobrenome}`;
-        const nomeSocial = (nomeCompleto === "Janaina Soares Cunha") ? "Não possui" : primeiroNome; 
-        
-        const email = `${segundoNome.toLowerCase()}@gmail.com`;
-        const telefone = `(31) 9${Math.floor(Math.random() * 9000 + 1000)}-${Math.floor(Math.random() * 9000 + 1000)}`;
-        
-        const medico = MEDICOS_APOIO[hash % MEDICOS_APOIO.length];
-        const hospitalData = HOSPITAIS_PARTO[hash % HOSPITAIS_PARTO.length];
-        
-        return {
-            nome: nomeCompleto,
-            social: nomeSocial,
-            email: email,
-            telefone: telefone,
-            medico: medico,
-            hospital: hospitalData.nome, 
-            endereco: hospitalData.endereco
-        };
+        // -------------------------------------------------
+        // 4. PREENCHE DADOS DA GESTANTE (REAIS)
+        // -------------------------------------------------
+        nomeInput.value = gestante.nome || "";
+        socialInput.value = gestante.nome_social || "Não informado";
+        emailInput.value = gestante.email || "";
+        telInput.value = gestante.telefone || "";
+
+        // -------------------------------------------------
+        // 5. DADOS DE ATENDIMENTO (PODEM VIR DO BACKEND NO FUTURO)
+        // -------------------------------------------------
+        medicoSpan.textContent = "Médico(a) da Rede SUS";
+        hospitalSpan.textContent = "Unidade Básica de Saúde - SUS";
+        enderecoSpan.textContent = "Conforme regional da gestante";
+
+        // -------------------------------------------------
+        // 6. LINKS FUNCIONAIS
+        // -------------------------------------------------
+        linksDiv.innerHTML = "";
+
+        const links = [
+            {
+                titulo: "Minhas Denúncias",
+                link: "/codigo/gestante/denuncia/denuncia.html"
+            },
+            {
+                titulo: "Meus Prontuários",
+                link: "/codigo/gestante/prontuario/prontuario.html"
+            }
+        ];
+
+        links.forEach(item => {
+            const a = document.createElement("a");
+            a.href = item.link;
+            a.textContent = item.titulo;
+            a.classList.add("info-link");
+            linksDiv.appendChild(a);
+        });
+
+    } catch (error) {
+        console.error("Erro ao carregar dados da gestante:", error);
+        alert("Erro ao carregar seus dados. Tente novamente.");
     }
 
-    // -------------------------------------------------------------
-    // LÓGICA DE INICIALIZAÇÃO
-    // -------------------------------------------------------------
-    
-    // 1. Resgata Dados do Local Storage
-    const cpfLogado = localStorage.getItem('gestante_cpf_logada');
-    // 🚀 NOVO: Resgata E-mail e Telefone salvos no cadastro
-    const emailSalvo = localStorage.getItem('gestante_email_logada');
-    const telefoneSalvo = localStorage.getItem('gestante_telefone_logada');
+    // -------------------------------------------------
+    // 7. MÁSCARA DE TELEFONE
+    // -------------------------------------------------
+    telInput.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, "");
+        let masked = "";
 
-    if (!cpfLogado) {
-        alert("Sessão expirada. Redirecionando para a Home.");
-        window.location.href = '/codigo/home/home.html'; 
-        return; 
-    }
+        if (value.length > 0) masked += "(" + value.substring(0, 2);
+        if (value.length > 2) masked += ") " + value.substring(2, 7);
+        if (value.length > 7) masked += "-" + value.substring(7, 11);
 
-    // 2. Gera os Dados de Atendimento (Nome, Médico, Hospital, etc.)
-    // Estes campos continuam sendo gerados/simulados, pois não vêm do cadastro.
-    const gestanteDataSimulada = generateGestanteData(cpfLogado);
-
-    // 3. Preenche os campos do formulário
-    
-    // Nome: Usa o nome simulado (que é consistente baseado no CPF)
-    nomeInput.value = gestanteDataSimulada.nome;
-    socialInput.value = gestanteDataSimulada.social;
-    
-    // 🚀 CORREÇÃO: E-mail e Telefone usam os valores salvos no cadastro (se existirem)
-    emailInput.value = emailSalvo || gestanteDataSimulada.email;
-    telInput.value = telefoneSalvo || gestanteDataSimulada.telefone;
-
-    // Dados de Atendimento (continuam simulados)
-    medicoSpan.textContent = gestanteDataSimulada.medico;
-    hospitalSpan.textContent = gestanteDataSimulada.hospital;
-    enderecoSpan.textContent = gestanteDataSimulada.endereco;
-    
-    // Links (mantido)
-    linksDiv.innerHTML = ""; 
-    LINKS_GESTANTE.forEach(item => {
-        const a = document.createElement("a");
-        a.href = item.link;
-        a.textContent = item.titulo;
-        a.classList.add("info-link");
-        linksDiv.appendChild(a);
+        e.target.value = masked;
     });
 
-    // Opcional: Adicionar máscara de telefone (mantido)
-    telInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, '');
-        let maskedValue = '';
-
-        if (value.length > 0) maskedValue += '(' + value.substring(0, 2);
-        if (value.length > 2) maskedValue += ') ' + value.substring(2, 7);
-        if (value.length > 7) maskedValue += '-' + value.substring(7, 11);
-        
-        e.target.value = maskedValue;
-    });
 });
