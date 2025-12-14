@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            // 🔥 BUSCA SOMENTE POR CPF
+            // BUSCA SOMENTE POR CPF
             const response = await fetch(
                 `http://localhost:3000/gestantes?cpf=${cpf}`
             );

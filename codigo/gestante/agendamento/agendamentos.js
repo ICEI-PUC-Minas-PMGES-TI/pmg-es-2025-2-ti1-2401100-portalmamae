@@ -1,6 +1,20 @@
-// Gera horários de 00:00 a 23:30
+
+// VERIFICA LOGIN DA GESTANTE
+
+const gestanteLogada = JSON.parse(localStorage.getItem("gestanteLogada"));
+
+if (!gestanteLogada || !gestanteLogada.cpf) {
+  alert("Sessão expirada. Faça login novamente.");
+  window.location.href = "/codigo/gestante/loginGestante/loginGestante.html";
+}
+
+
+// GERA HORÁRIOS
+
 function gerarHorarios() {
   const select = document.getElementById("horario");
+  select.innerHTML = '<option value="">Selecione o horário</option>';
+
   for (let h = 0; h < 24; h++) {
     for (let m of ["00", "30"]) {
       const hora = `${String(h).padStart(2, "0")}:${m}`;
@@ -12,24 +26,28 @@ function gerarHorarios() {
   }
 }
 
-// Define a data mínima
+
+// DATA MÍNIMA
+
 function configurarDataMinima() {
   const dataInput = document.getElementById("data");
-  dataInput.min = "2025-01-01";
-  dataInput.value = "2025-01-01";
+  const hoje = new Date().toISOString().split("T")[0];
+  dataInput.min = hoje;
 }
 
-// Buscar CEP
+
+// BUSCAR CEP
+
 async function buscarCEP(cep) {
   cep = cep.replace(/\D/g, "");
   if (cep.length !== 8) return;
 
   try {
-    const resposta = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
-    const dados = await resposta.json();
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const dados = await response.json();
 
-    if (!dados || dados.erro) {
-      alert("❌ CEP não encontrado!");
+    if (dados.erro) {
+      alert("CEP não encontrado.");
       return;
     }
 
@@ -37,46 +55,50 @@ async function buscarCEP(cep) {
     document.getElementById("cidade").value = dados.localidade;
     document.getElementById("rua").value = dados.logradouro;
 
-  } catch (erro) {
-    console.error("Erro na busca do CEP:", erro);
-    alert("Não foi possível buscar o CEP agora. Tente novamente.");
+  } catch (error) {
+    alert("Erro ao buscar CEP.");
   }
 }
 
-document.getElementById("cep").addEventListener("blur", (e) => {
+document.getElementById("cep").addEventListener("blur", e => {
   buscarCEP(e.target.value);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  gerarHorarios();
-  configurarDataMinima();
+// MOSTRAR / ESCONDER MÉDICO
+
+const radios = document.querySelectorAll('input[name="acompanhamento"]');
+const campoMedico = document.getElementById("campoMedico");
+const nomeMedicoInput = document.getElementById("nomeMedico");
+
+radios.forEach(radio => {
+  radio.addEventListener("change", () => {
+    if (radio.value === "Sim" && radio.checked) {
+      campoMedico.style.display = "block";
+      nomeMedicoInput.required = true;
+    } else {
+      campoMedico.style.display = "none";
+      nomeMedicoInput.value = "";
+      nomeMedicoInput.required = false;
+    }
+  });
 });
 
-// Limpa tudo do formulário após envio
+
+// LIMPAR FORMULÁRIO
+
 function limparFormulario() {
-  const form = document.getElementById("formMamae");
-  form.reset();
-
-  document.getElementById("uf").value = "";
-  document.getElementById("cidade").value = "";
-  document.getElementById("rua").value = "";
-  document.getElementById("horario").selectedIndex = 0;
+  document.getElementById("formMamae").reset();
+  campoMedico.style.display = "none";
 }
 
-// Salva no histórico corretamente
-function salvarNoHistorico(dados) {
-  let historico = JSON.parse(localStorage.getItem("historicoAgendamentos")) || [];
-  historico.push(dados);
 
-  // Agora realmente salva o histórico completo!
-  localStorage.setItem("historicoAgendamentos", JSON.stringify(historico));
-}
+// ENVIO DO FORMULÁRIO
 
-// Envio do formulário
-document.getElementById("formMamae").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("formMamae").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-  const dadosFormulario = {
+  const dadosAgendamento = {
+    localConsulta: document.getElementById("localConsulta").value,
     uf: document.getElementById("uf").value,
     cidade: document.getElementById("cidade").value,
     rua: document.getElementById("rua").value,
@@ -86,17 +108,46 @@ document.getElementById("formMamae").addEventListener("submit", function (event)
     data: document.getElementById("data").value,
     horario: document.getElementById("horario").value,
     acompanhamento: document.querySelector('input[name="acompanhamento"]:checked').value,
+    nomeMedico: nomeMedicoInput.value || null,
+    criadoEm: new Date().toISOString()
   };
 
-  // Envia para a próxima página
-  localStorage.setItem("agendamentoAtual", JSON.stringify(dadosFormulario));
+  try {
+    const response = await fetch(
+      `http://localhost:3000/gestantes?cpf=${gestanteLogada.cpf}`
+    );
+    const gestantes = await response.json();
 
-  // Salva no histórico corretamente
-  salvarNoHistorico(dadosFormulario);
+    if (gestantes.length === 0) {
+      alert("Gestante não encontrada.");
+      return;
+    }
 
-  alert("✅ Dados enviados com sucesso!");
+    const gestante = gestantes[0];
+    gestante.agendamentos.push(dadosAgendamento);
 
-  limparFormulario();
+    await fetch(`http://localhost:3000/gestantes/${gestante.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        agendamentos: gestante.agendamentos
+      })
+    });
 
-  window.location.href = "/codigo/gestante/agenda/agendaG.html";
+    alert("✅ Agendamento realizado com sucesso!");
+    limparFormulario();
+    window.location.href = "/codigo/gestante/agenda/agendaG.html";
+
+  } catch (error) {
+    console.error(error);
+    alert("Erro ao salvar agendamento.");
+  }
+});
+
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  gerarHorarios();
+  configurarDataMinima();
 });
