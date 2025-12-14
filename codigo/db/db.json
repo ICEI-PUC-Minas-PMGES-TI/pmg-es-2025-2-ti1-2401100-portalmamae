@@ -104,6 +104,29 @@
       "email": "juliageralda@gmail.com",
       "endereco": {},
       "agendamentos": [],
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ],
       "quadro_medico": {
         "portador_doencas_transmissiveis": false,
         "possui_diabetes": false,
