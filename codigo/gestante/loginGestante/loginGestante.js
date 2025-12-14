@@ -9,11 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     cpfInput.addEventListener("input", (e) => {
         let value = e.target.value.replace(/\D/g, "");
-
-        if (value.length > 3) value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        if (value.length > 6) value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        if (value.length > 9) value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
         e.target.value = value;
     });
 
@@ -21,51 +19,59 @@ document.addEventListener("DOMContentLoaded", () => {
     // MOSTRAR / OCULTAR SENHA
     // ===============================
     togglePassword.addEventListener("click", () => {
-        const type = senhaInput.type === "password" ? "text" : "password";
-        senhaInput.type = type;
+        senhaInput.type =
+            senhaInput.type === "password" ? "text" : "password";
     });
 
     // ===============================
-    // LOGIN REAL (db.json)
+    // LOGIN REAL DA GESTANTE
     // ===============================
     loginForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        const cpfFormatado = cpfInput.value;
+        const cpf = cpfInput.value;
         const senha = senhaInput.value;
-        const cpfLimpo = cpfFormatado.replace(/\D/g, "");
 
-        if (cpfLimpo.length !== 11 || !senha) {
+        if (cpf.length !== 14 || !senha) {
             alert("Preencha CPF e senha corretamente.");
             return;
         }
 
         try {
+            // 🔥 BUSCA SOMENTE POR CPF
             const response = await fetch(
-                `http://localhost:3000/usuarios?cpf=${cpfFormatado}&senha=${senha}`
+                `http://localhost:3000/gestantes?cpf=${cpf}`
             );
 
-            const usuarios = await response.json();
+            const gestantes = await response.json();
 
-            if (usuarios.length === 0) {
-                alert("❌ CPF ou senha inválidos.");
+            if (gestantes.length === 0) {
+                alert("Gestante não encontrada.");
                 return;
             }
 
-            const usuario = usuarios[0];
+            const gestante = gestantes[0];
 
-            // 🔐 SALVA A GESTANTE LOGADA (PADRÃO ÚNICO)
+            // 🔐 VALIDA SENHA
+            if (gestante.senha !== senha) {
+                alert("Senha incorreta.");
+                return;
+            }
+
+            // ✅ SALVA SESSÃO LIMPA
             localStorage.setItem(
                 "gestanteLogada",
                 JSON.stringify({
-                    id: usuario.id,
-                    cpf: cpfLimpo,
-                    nome: usuario.nome
+                    id: gestante.id,
+                    cpf: gestante.cpf,
+                    nome: gestante.nome_completo,
+                    email: gestante.email
                 })
             );
 
-            alert("✅ Login realizado com sucesso!");
-            window.location.href = "/codigo/gestante/portalG/portalG.html";
+            alert("Login realizado com sucesso!");
+            window.location.href =
+                "/codigo/gestante/portalG/portalG.html";
 
         } catch (error) {
             console.error(error);
