@@ -90,17 +90,21 @@ body {
 /* CALENDÁRIO */
 .calendar-panel {
   width: 70%;
-  background: #FEA1A3;
+  background: #e6989a;
   padding: 20px;
   border-radius: 8px;
   color: #fff;
 }
 
 .calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+    background-color: #e6989a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .calendar-header button {
@@ -114,12 +118,43 @@ body {
   cursor: pointer;
 }
 
-.weekdays-grid,
-.days-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+.weekdays-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #e6989a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
-
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #e6989a;
+    gap: 1px;
+    border: 1px solid #e6989a;
+}
+.day-cell {
+    background-color: #dd9293;
+    min-height: 100px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.day-cell.selected {
+    background-color: #e6989a !important;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 .weekdays-grid div {
   text-align: center;
   font-weight: bold;
@@ -157,6 +192,16 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+
+.btn-acessar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #067018;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 /* RESPONSIVO */
