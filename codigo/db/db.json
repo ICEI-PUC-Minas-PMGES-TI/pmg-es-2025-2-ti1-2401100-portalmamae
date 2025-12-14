@@ -17,6 +17,36 @@
         "cidade": "Belo Horizonte",
         "estado": "MG"
       },
+      "agendamentos": [
+        {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+        },
+        {
+          "localConsulta": "UBS centro",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Exame",
+          "especialidade": "Ultrassonografia",
+          "data": "2025-12-17",
+          "horario": "17:00",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:32:09.405Z"
+        }
+      ],
       "quadro_medico": {
         "portador_doencas_transmissiveis": false,
         "possui_diabetes": false,
@@ -81,10 +111,10 @@
     {
       "id": "0237",
       "cpfGestante": "176.270.001-38",
-      "local": "materdei-contorno",
+      "local": "consultório XYZ",
       "data": "01/12/2025",
       "anonima": true,
-      "detalhes": "Enfermeira me chamou de puta",
+      "detalhes": "Enfermeira me chamou de gorda durante a consulta.",
       "criadaEm": "2025-12-14T17:09:23.630Z"
     }
   ],
