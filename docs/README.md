@@ -465,22 +465,30 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-**Images**:
+### Frameworks, Bibliotecas e Ambiente:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+* **Node.js** - [https://nodejs.org/](https://nodejs.org/)
+  * Ambiente de execução JavaScript (*runtime*) utilizado no backend para gerenciar a aplicação e executar as dependências do servidor.
 
-**Fonts:**
+* **Bootstrap** - [https://getbootstrap.com/](https://getbootstrap.com/)
+  * Framework CSS utilizado para o desenvolvimento do frontend, garantindo responsividade, sistema de grid e componentes visuais padronizados.
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* **Puppeteer** - [https://pptr.dev/](https://pptr.dev/)
+  * Biblioteca Node.js que fornece uma API de alto nível para controlar o Chrome/Chromium, utilizada nesta solução para a geração automatizada de arquivos PDF.
 
-**Scripts:**
+### APIs
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* **Google Gemini API** - [https://ai.google.dev/](https://ai.google.dev/)
+  * Interface de programação utilizada para integrar recursos de Inteligência Artificial generativa, permitindo a criação de exames.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
+* **YouTube Data API** - [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
+  * API utilizada para acessar a base de dados do YouTube, permitindo a busca e exibição de vídeos e metadados diretamente na interface da solução.
+
+* **Google Maps Platform** - [https://mapsplatform.google.com/](https://mapsplatform.google.com/)
+  * Conjunto de APIs utilizado para incorporar mapas interativos e funcionalidades de geolocalização.
+
+* **ViaCEP** - [https://viacep.com.br/](https://viacep.com.br/)
+  * Web Service (API REST) gratuito utilizado para consultar códigos postais (CEP) e preencher automaticamente os dados de endereço nos formulários.
 
 # Referências
 
