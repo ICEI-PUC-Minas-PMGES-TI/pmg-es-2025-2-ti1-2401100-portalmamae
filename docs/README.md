@@ -2,11 +2,11 @@
 .
 Informações básicas do projeto.
 
-* **Projeto:** Portal Mamãe
+* *Projeto:* Portal Mamãe
 
-* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
+* *Repositório GitHub:* https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git
 
-* **Membros da equipe:**
+* *Membros da equipe:*
 
   * [Rafael Galileu Thales Oliveira](https://github.com/RafaelGalileu)
   * [Vinícius Matos Oliveira](https://github.com/vnmatos)
@@ -36,15 +36,15 @@ O pré-natal é uma das etapas mais importantes da saúde pública, crucial para
 
 O principal problema que o Portal Mamãe busca resolver é a fragmentação e lentidão do acesso ao pré-natal na saúde pública. A dificuldade em agendar a primeira consulta, a necessidade de deslocamento para obter resultados de exames e a falta de um prontuário eletrônico unificado resultando em:
 
-  * **Atraso na Detecção de Risco:** A falta de acesso rápido ao histórico e aos resultados de exames pela equipe médica compromete a identificação precoce de gestações de alto risco.
+  * *Atraso na Detecção de Risco:* A falta de acesso rápido ao histórico e aos resultados de exames pela equipe médica compromete a identificação precoce de gestações de alto risco.
 
-    * **Difícil acesso a exames e informações médicas:** A ausência de um local unificado para armazenar exames e resultados obriga a gestante a acessar múltiplas plataformas de laboratórios ou a se deslocar até unidades de saúde para reunir informações por conta própria, aumentando o risco de perda, esquecimento ou desorganização dos dados.
+    * *Difícil acesso a exames e informações médicas:* A ausência de um local unificado para armazenar exames e resultados obriga a gestante a acessar múltiplas plataformas de laboratórios ou a se deslocar até unidades de saúde para reunir informações por conta própria, aumentando o risco de perda, esquecimento ou desorganização dos dados.
 
-  * **Desperdício de Tempo e Sobrecarga:** Pacientes perdem tempo com deslocamentos desnecessários e os médicos enfrentam burocracia para organizar agendamentos e acessar informações.
+  * *Desperdício de Tempo e Sobrecarga:* Pacientes perdem tempo com deslocamentos desnecessários e os médicos enfrentam burocracia para organizar agendamentos e acessar informações.
 
-  * **Falta de Personalização e Confiança:** A gestante não tem garantia de atendimento em locais próximos ou informações prévias sobre o profissional, afetando a segurança e confiança na consulta.
+  * *Falta de Personalização e Confiança:* A gestante não tem garantia de atendimento em locais próximos ou informações prévias sobre o profissional, afetando a segurança e confiança na consulta.
 
-  * **Falta de informações básicas sobre gestação:** Muitas gestantes, especialmente mães jovens ou de primeira viagem, não possuem acesso a informações sobre os cuidados básicos necessários durante a gravidez.
+  * *Falta de informações básicas sobre gestação:* Muitas gestantes, especialmente mães jovens ou de primeira viagem, não possuem acesso a informações sobre os cuidados básicos necessários durante a gravidez.
 
 ## Objetivos
 
@@ -52,13 +52,13 @@ A finalidade do Portal Mamãe é ser um software especializado no acompanhamento
 
 Nesse contexto, os objetivos específicos são:
 
-  * **Reduzir Atrasos no Atendimento:** Permitir que a gestante agende consultas e exames (como ultrassom) de forma rápida e online, com indicação de unidades de saúde próximas.
+  * *Reduzir Atrasos no Atendimento:* Permitir que a gestante agende consultas e exames (como ultrassom) de forma rápida e online, com indicação de unidades de saúde próximas.
 
-  * **Otimizar o Fluxo de Informações:** Criar um Prontuário Eletrônico que centralize resultados de exames e histórico para acesso imediato por gestantes e médicos.
+  * *Otimizar o Fluxo de Informações:* Criar um Prontuário Eletrônico que centralize resultados de exames e histórico para acesso imediato por gestantes e médicos.
 
-  * **Garantir Atendimento Personalizado e Seguro:** Disponibilizar informações sobre profissionais e condições de saúde prévias, permitindo que o médico ofereça atenção personalizada e melhore a fluidez das operações.
+  * *Garantir Atendimento Personalizado e Seguro:* Disponibilizar informações sobre profissionais e condições de saúde prévias, permitindo que o médico ofereça atenção personalizada e melhore a fluidez das operações.
 
-  * **Aumentar a Adesão ao Pré-Natal:** Enviar alertas e lembretes de consultas marcadas para o médico e para a gestante e estabelecer um canal de comunicação direta.
+  * *Aumentar a Adesão ao Pré-Natal:* Enviar alertas e lembretes de consultas marcadas para o médico e para a gestante e estabelecer um canal de comunicação direta.
 
 
 ## Justificativa
@@ -67,20 +67,20 @@ O desenvolvimento do Portal Mamãe é justificado pela necessidade urgente de mo
 
 Acreditamos que a tecnologia pode quebrar as barreiras de acesso e informação que hoje tornam o acompanhamento das gestantes ineficiente. Ao oferecer um sistema que:
 
-  * **Centraliza a Informação:** Garante que o médico tenha conhecimento prévio da situação geral.
+  * *Centraliza a Informação:* Garante que o médico tenha conhecimento prévio da situação geral.
 
-  * **Reduz Burocracia:** Permite que o médico se concentre na qualidade e na segurança do atendimento.
+  * *Reduz Burocracia:* Permite que o médico se concentre na qualidade e na segurança do atendimento.
 
-  * **Empodera a Paciente:** Oferece praticidade para agendar e ver resultados de exames rapidamente.
+  * *Empodera a Paciente:* Oferece praticidade para agendar e ver resultados de exames rapidamente.
 
 
 ## Público-Alvo
 
 O Portal Mamãe é voltado principalmente para dois públicos essenciais dentro do sistema de saúde pública:
 
-  1. **As Gestantes (Usuárias Finais):** Este é o público mais abrangente, buscando facilidade no acesso a informações, agendamentos práticos e a segurança de ter seu histórico de saúde acessível. Elas utilizarão o sistema para agendar consultas, receber resultados e se comunicar com a equipe.
+  1. *As Gestantes (Usuárias Finais):* Este é o público mais abrangente, buscando facilidade no acesso a informações, agendamentos práticos e a segurança de ter seu histórico de saúde acessível. Elas utilizarão o sistema para agendar consultas, receber resultados e se comunicar com a equipe.
 
-  2. **Os Profissionais de Saúde (Médicos, Enfermeiros, Unidades de Saúde):** Inclui médicos obstetras e outros profissionais envolvidos no pré-natal. Eles utilizarão a plataforma para visualizar e organizar agendamentos, acessar prontuários e exames anteriores, e gerenciar a comunicação com as pacientes para um atendimento mais humanizado e eficiente.
+  2. *Os Profissionais de Saúde (Médicos, Enfermeiros, Unidades de Saúde):* Inclui médicos obstetras e outros profissionais envolvidos no pré-natal. Eles utilizarão a plataforma para visualizar e organizar agendamentos, acessar prontuários e exames anteriores, e gerenciar a comunicação com as pacientes para um atendimento mais humanizado e eficiente.
 
 Ambos os grupos se beneficiam, pois o sistema promove uma comunicação clara, otimiza o fluxo de trabalho do profissional e, o mais importante, eleva a qualidade e a segurança do atendimento prestado à gestante.
 
@@ -91,19 +91,19 @@ Ambos os grupos se beneficiam, pois o sistema promove uma comunicação clara, o
 
 Nessa etapa, vamos trabalhar com a metodologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
 
-* **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
+* *Matriz CSD*: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
 
 ![MatrizCSD](/docs/images/MatrizCSD.png)
 
-* **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema;
+* *Mapa de stakeholders*: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema;
 
 ![MapaStakeholders](/docs/images/MapaStakeholders.png)
 
-* **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
+* *Entrevistas qualitativas*: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
 
 ![Entrevistas qualitativas](/docs/images/EntrevistaQualitativa.png)
 
-* **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+* *Highlights de pesquisa*: um compilado do levantamento realizado por meio das entrevistas.
 
 ![Highlights de Pesquisa](/docs/images/HighlightsDePesquisa.png)
 
@@ -137,7 +137,7 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
+| EU COMO...PERSONA | QUERO/PRECISO ...FUNCIONALIDADE        | PARA ...MOTIVO/VALOR               |
 | --------------------- | ------------------------------------------ | -------------------------------------- |
 | Usuário: Gestante   | Agendar consultas presenciais sem sair de casa.  | Não preciso me deslocar e é mais prático.             |
 | Usuário: Gestante         | Receber resultados de exames online.       | Não preciso me deslocar e tenho acesso aos resultados, mais rápido. |
@@ -352,17 +352,20 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | API | Google Maps  | https://developers.google.com/maps?hl=pt-br  |
 |                             |            |                                                    |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+> ⚠️ *APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO*
+> 
+>Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
+[Kaban](/docs/images/kaban.png)
 
+[Divisão_de_papéis](/docs/images/docs/images/divisão de funções.png)
 
 # Solução Implementada
+
 
 Esta seção apresenta todos os detalhes da solução criada no projeto.
 
@@ -372,11 +375,11 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 [![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
->
-> Inclua um link para o vídeo do projeto.
+> ⚠️ *APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO*
+> 
+>O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
+> 
+>Inclua um link para o vídeo do projeto.
 
 ## Funcionalidades
 
@@ -386,9 +389,9 @@ Esta seção apresenta as funcionalidades da solução.Info
 
 Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e deslocamentos desnecessários.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   {
           "localConsulta": "Hospital MaterDay",
           "uf": "MG",
@@ -403,12 +406,12 @@ Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e 
           "nomeMedico": "Andreia",
           "criadoEm": "2025-12-14T18:05:27.729Z"
   }
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Agendar consulta
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela de  Agendamento on-line](/docs/images/siteAgendarConsulta.png)
 
@@ -416,9 +419,9 @@ Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e 
 
 Permite consultar a agenda e acessar agendamentos.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   {
           "localConsulta": "Hospital MaterDay",
           "uf": "MG",
@@ -433,13 +436,13 @@ Permite consultar a agenda e acessar agendamentos.
           "nomeMedico": "Andreia",
           "criadoEm": "2025-12-14T18:05:27.729Z"
   }
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Agendar consulta
   * depois, escolha a opção Sua Agenda
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela de  Agendamento on-line](/docs/images/siteAgendaGestante.jpeg)
 ![Tela de  Agendamento on-line](/docs/images/siteAgendaPrestador.jpeg)
@@ -449,9 +452,9 @@ Permite consultar a agenda e acessar agendamentos.
 Permite praticidade no acompanhamento da gestação, acesso rápido a exames
 realizados e maior organização das informações médicas.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   {
       "id": "G00012",
       "nome_completo": "Rayssa Sthefany dos Santos",
@@ -502,11 +505,11 @@ realizados e maior organização das informações médicas.
         }
       ]
     }
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela Portal Gestante](/docs/images/sitePortalGestante.jpeg)
 ![Tela Portal Prestador](/docs/images/sitePortalPrestador.jpeg)
@@ -515,9 +518,9 @@ realizados e maior organização das informações médicas.
 
 Unificação do sistema com todas as informações da gestante.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   {
       "id": "fadb",
       "cpf": "22233344455",
@@ -529,13 +532,13 @@ Unificação do sistema com todas as informações da gestante.
       "diagnostico": "enxaqueca",
       "dataRegistro": "2025-12-13T21:01:32.056Z"
   }
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Prontuários e informações
   * Digite o CPF da gestante
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela de  Prontuário on-line](/docs/images/siteProntuario.jpeg)
 
@@ -543,9 +546,9 @@ Unificação do sistema com todas as informações da gestante.
 
 Tela para registro de denúncias.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   {
       "id": "0237",
       "cpfGestante": "176.270.001-38",
@@ -555,12 +558,12 @@ Tela para registro de denúncias.
       "detalhes": "Enfermeira me desrespeitou",
       "criadaEm": "2025-12-14T17:09:23.630Z"
   }
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Fazer denúncia
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela de Denúncias](/docs/images/siteDenuncia.png)
 
@@ -568,9 +571,9 @@ Tela para registro de denúncias.
 
 Apresentação do quadro médico e resultados de exames da gestante.
 
-* **Estrutura de dados:**
+* *Estrutura de dados:*
 
-```json
+json
   "quadro_medico": {
         "portador_doencas_transmissiveis": false,
         "possui_diabetes": false,
@@ -603,12 +606,12 @@ Apresentação do quadro médico e resultados de exames da gestante.
           "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
         }
       ]
-```
 
-* **Instruções de acesso:**
+
+* *Instruções de acesso:*
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Meus Exames
-* **Tela da funcionalidade**:
+* *Tela da funcionalidade*:
 
 ![Tela Exames](/docs/images/siteExames.png)
 
@@ -620,7 +623,7 @@ Descrição das estruturas de dados utilizadas na solução com exemplos no form
 
 Gestantes da aplicação
 
-```json
+json
   {
       "id": "G00012",
       "nome_completo": "Rayssa Sthefany dos Santos",
@@ -671,13 +674,13 @@ Gestantes da aplicação
         }
       ]
     }
-```
+
 
 ##### Estrutura de Dados - Médicos
 
 Registro dos médicos do sistema utilizados para login e para o perfil do sistema
 
-```json
+json
   {
       "tipo": "medico",
       "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
@@ -690,13 +693,13 @@ Registro dos médicos do sistema utilizados para login e para o perfil do sistem
       "admin": false,
       "endereco": "Não informado"
   }
-```
+
 
 ##### Estrutura de Dados - Denúncias
 
 Registro de denúncias do sistema
 
-```json
+json
   {
       "id": "0237",
       "cpfGestante": "176.270.001-38",
@@ -706,13 +709,13 @@ Registro de denúncias do sistema
       "detalhes": "Enfermeira me desrespeitou",
       "criadaEm": "2025-12-14T17:09:23.630Z"
   }
-```
+
 
 ##### Estrutura de Dados - Prontuários
 
 Registro de prontuário das pacientes.
 
-```json
+json
   {
       "id": "fadb",
       "cpf": "22233344455",
@@ -724,13 +727,13 @@ Registro de prontuário das pacientes.
       "diagnostico": "enxaqueca",
       "dataRegistro": "2025-12-13T21:01:32.056Z"
   }
-```
+
 
 ##### Estrutura de Dados - Agendamentos
 
 Registro de Agendamentos.
 
-```json
+json
   {
           "localConsulta": "Hospital MaterDay",
           "uf": "MG",
@@ -745,7 +748,7 @@ Registro de Agendamentos.
           "nomeMedico": "Andreia",
           "criadoEm": "2025-12-14T18:05:27.729Z"
   }
-```
+
 
 ## Módulos e APIs
 
@@ -753,41 +756,41 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 ### Frameworks, Bibliotecas e Ambiente:
 
-* **Node.js** - [https://nodejs.org/](https://nodejs.org/)
-  * Ambiente de execução JavaScript (*runtime*) utilizado no backend para gerenciar a aplicação e executar as dependências do servidor.
+* *Node.js* - [https://nodejs.org/](https://nodejs.org/)
+  * Ambiente de execução JavaScript (runtime) utilizado no backend para gerenciar a aplicação e executar as dependências do servidor.
 
-* **Bootstrap** - [https://getbootstrap.com/](https://getbootstrap.com/)
+* *Bootstrap* - [https://getbootstrap.com/](https://getbootstrap.com/)
   * Framework CSS utilizado para o desenvolvimento do frontend, garantindo responsividade, sistema de grid e componentes visuais padronizados.
 
-* **Puppeteer** - [https://pptr.dev/](https://pptr.dev/)
+* *Puppeteer* - [https://pptr.dev/](https://pptr.dev/)
   * Biblioteca Node.js que fornece uma API de alto nível para controlar o Chrome/Chromium, utilizada nesta solução para a geração automatizada de arquivos PDF.
 
 ### APIs
 
-* **Google Gemini API** - [https://ai.google.dev/](https://ai.google.dev/)
+* *Google Gemini API* - [https://ai.google.dev/](https://ai.google.dev/)
   * Interface de programação utilizada para integrar recursos de Inteligência Artificial generativa, permitindo a criação de exames.
 
-* **YouTube Data API** - [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
+* *YouTube Data API* - [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
   * API utilizada para acessar a base de dados do YouTube, permitindo a busca e exibição de vídeos e metadados diretamente na interface da solução.
 
-* **Google Maps Platform** - [https://mapsplatform.google.com/](https://mapsplatform.google.com/)
+* *Google Maps Platform* - [https://mapsplatform.google.com/](https://mapsplatform.google.com/)
   * Conjunto de APIs utilizado para incorporar mapas interativos e funcionalidades de geolocalização.
 
-* **ViaCEP** - [https://viacep.com.br/](https://viacep.com.br/)
+* *ViaCEP* - [https://viacep.com.br/](https://viacep.com.br/)
   * Web Service (API REST) gratuito utilizado para consultar códigos postais (CEP) e preencher automaticamente os dados de endereço nos formulários.
 
 # Referências
 
 As referências utilizadas no trabalho foram:
 
-* **CarnaLivre - Hospedagem:** Repositório GitHub utilizado como base de estudo para a estrutura do projeto. Disponível em: [GitHub](https://github.com/Joao-Prado0/CarnaLivre-Hospedagem).
+* *CarnaLivre - Hospedagem:* Repositório GitHub utilizado como base de estudo para a estrutura do projeto. Disponível em: [GitHub](https://github.com/Joao-Prado0/CarnaLivre-Hospedagem).
 
-* **Doctoralia:** Plataforma utilizada como referência para o fluxo de busca de profissionais e agendamento de consultas. Disponível em: [doctoralia.com.br](https://www.doctoralia.com.br/).
+* *Doctoralia:* Plataforma utilizada como referência para o fluxo de busca de profissionais e agendamento de consultas. Disponível em: [doctoralia.com.br](https://www.doctoralia.com.br/).
 
-* **Rede Hospitalar de Belo Horizonte (PBH):** Fonte oficial de dados sobre a rede de atenção à saúde e locais de atendimento. Disponível em: [Portal PBH](https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/rede-hospitalar).
+* *Rede Hospitalar de Belo Horizonte (PBH):* Fonte oficial de dados sobre a rede de atenção à saúde e locais de atendimento. Disponível em: [Portal PBH](https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/rede-hospitalar).
 
-* **Caderneta da Gestante (Ministério da Saúde):** A principal referência para cronogramas de consultas e exames no SUS. Disponível em: [Cardeneta da Gestante](https://www.mds.gov.br/webarquivos/arquivo/crianca_feliz/Treinamento_Multiplicadores_Coordenadores/Caderneta-Gest-Internet(1).pdf).
+* *Caderneta da Gestante (Ministério da Saúde):* A principal referência para cronogramas de consultas e exames no SUS. Disponível em: [Cardeneta da Gestante](https://www.mds.gov.br/webarquivos/arquivo/crianca_feliz/Treinamento_Multiplicadores_Coordenadores/Caderneta-Gest-Internet(1).pdf).
 
-* **FEBRASGO** (Federação Brasileira das Associações de Ginecologia e Obstetrícia). Calendário de consultas e exames.
+* *FEBRASGO* (Federação Brasileira das Associações de Ginecologia e Obstetrícia). Calendário de consultas e exames.
 
-* SCHWABER, K.; SUTHERLAND, J. **O Guia do Scrum: As Regras do Jogo.** Disponível em: [scrumguides](scrumguides.org).
+* SCHWABER, K.; SUTHERLAND, J. *O Guia do Scrum: As Regras do Jogo.* Disponível em: [scrumguides](scrumguides.org).

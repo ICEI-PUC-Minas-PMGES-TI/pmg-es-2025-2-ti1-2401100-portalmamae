@@ -103,7 +103,22 @@
       "telefone": "(31) 95555-4444",
       "email": "juliageralda@gmail.com",
       "endereco": {},
-      "agendamentos": [],
+      "agendamentos": [
+        {
+          "localConsulta": "Upa Unimed Contorno",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Avenida Afonso Pena",
+          "cep": "30130-000",
+          "servico": "Consulta",
+          "especialidade": "Raio X",
+          "data": "2025-12-23",
+          "horario": "10:00",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T20:46:07.328Z"
+        }
+      ],
       "resultado_exames": [
         {
           "id_exame": "E273656",
