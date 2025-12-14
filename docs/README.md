@@ -12,9 +12,9 @@ Informações básicas do projeto.
   * [Vinícius Matos Oliveira](https://github.com/vnmatos)
   * [Emanuelly Oliveira Arruda Cabral](https://github.com/Manu-Olliver)
   * [Davi Hermidas Lage Brandão](https://github.com/hermidas-wadac)
-  * [Bernardo Caetano Rocha de Lima](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
+  * [Bernardo Caetano Rocha de Lima](https://github.com/Bernardorochadev)
   * [Victor Gabriel Soares Ananias](https://github.com/victorVT03)
-  * [Pedro Henrique Dias Pereira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Pedro Henrique Dias Pereira](https://github.com/PedroH0001)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -34,7 +34,7 @@ O pré-natal é uma das etapas mais importantes da saúde pública, crucial para
 
 ## Problema
 
-O principal problema que o Portal Mamãe busca resolver é a fragmentação e lentidão do acesso ao pré-natal na saúde pública. A dificuldade em agendar a primeira consulta, a necessidade de deslocamento para obter resultados de exames e a falta de um prontuário eletrônico unificado resultam em:
+O principal problema que o Portal Mamãe busca resolver é a fragmentação e lentidão do acesso ao pré-natal na saúde pública. A dificuldade em agendar a primeira consulta, a necessidade de deslocamento para obter resultados de exames e a falta de um prontuário eletrônico unificado resultando em:
 
   * **Atraso na Detecção de Risco:** A falta de acesso rápido ao histórico e aos resultados de exames pela equipe médica compromete a identificação precoce de gestações de alto risco.
 
@@ -349,6 +349,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-portalmamae.git  |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo | Figma  | https://www.figma.com/proto/9wZgUTGYPeOOI9tLe7QeH7/Untitled?node-id=0-1&t=QuG27JWyXK3J16Hv-1   |
+| API | Google Maps  | https://developers.google.com/maps?hl=pt-br  |
 |                             |            |                                                    |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
@@ -359,21 +360,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 # Solução Implementada
 
