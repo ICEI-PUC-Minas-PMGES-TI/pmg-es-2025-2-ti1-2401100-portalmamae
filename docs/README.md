@@ -395,18 +395,126 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+### Funcionalidade 1 - Agendamento on-line de consultas e exames
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e deslocamentos desnecessários.
 
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Acesse o menu principal e escolha a opção Agendar consulta
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de  Agendamento on-line](/docs/images/siteAgendarConsulta.png)
+
+### Funcionalidade 2 - Consulta rápida de agendamentos para gestantes e médico
+
+Permite consultar a agenda e acessar agendamentos.
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Agendar consulta
+  * depois, escolha a opção Sua Agenda
+* **Tela da funcionalidade**:
+
+![Tela de  Agendamento on-line](/docs\images\siteAgendaGestante.jpeg)
+![Tela de  Agendamento on-line](/docs\images\siteAgendaPrestador.jpeg)
+
+### Funcionalidade 3 - Centralização de informações para gestantes e médicos
+
+Permite praticidade no acompanhamento da gestação, acesso rápido a exames
+realizados e maior organização das informações médicas.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "G00012",
+      "nome_completo": "Rayssa Sthefany dos Santos",
+      "idade": 28,
+      "cpf": "176.270.001-38",
+      "senha": "1010",
+      "telefone": "(31) 99999-1234",
+      "email": "rayssa@gmail.com",
+      "endereco": {
+        "cep": "30130-000",
+        "logradouro": "Avenida Afonso Pena",
+        "numero": "1000",
+        "complemento": "Apto 101",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ]
+    }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+* **Tela da funcionalidade**:
+
+![Tela Portal Gestante](/docs\images\sitePortalGestante.jpeg)
+![Tela Portal Prestador](/docs\images\sitePortalPrestador.jpeg)
+
+### Funcionalidade 4 - Prontuário médico on-line
+
+Unificação do sistema com todas as informações da gestante.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "fadb",
+      "cpf": "22233344455",
+      "nome": "Andreia",
+      "idade": "44",
+      "motivo": "Dores de cabeça",
+      "historia": "A paciente relata dores de cabeça des do inicio do dia",
+      "exames": "ultrassom",
+      "diagnostico": "enxaqueca",
+      "dataRegistro": "2025-12-13T21:01:32.056Z"
+  }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Prontuários e informações
+  * Digite o CPF da gestante
+* **Tela da funcionalidade**:
+
+![Tela de  Prontuário on-line](/docs\images\siteProntuario.jpeg)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
