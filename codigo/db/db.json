@@ -17,6 +17,15 @@
         "cidade": "Belo Horizonte",
         "estado": "MG"
       },
+      "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
       "agendamentos": [
         {
           "localConsulta": "Hospital MaterDay",
@@ -61,15 +70,6 @@
           "criadoEm": "2025-12-14T19:20:49.707Z"
         }
       ],
-      "quadro_medico": {
-        "portador_doencas_transmissiveis": false,
-        "possui_diabetes": false,
-        "possui_outras_doencas": "nenhuma",
-        "utiliza_medicamentos_controlados": false,
-        "em_tratamento": false,
-        "alergia_a_medicamentos": true,
-        "alergia_detalhe": "Dipirona"
-      },
       "resultado_exames": [
         {
           "id_exame": "E273656",
@@ -93,6 +93,26 @@
           "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
         }
       ]
+    },
+    {
+      "id": "G1765744499548",
+      "nome_completo": "Julia Geralda Silva",
+      "idade": 34,
+      "cpf": "999.888.777-11",
+      "senha": "juliageralda",
+      "telefone": "(31) 95555-4444",
+      "email": "juliageralda@gmail.com",
+      "endereco": {},
+      "agendamentos": [],
+      "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": false,
+        "alergia_detalhe": ""
+      }
     }
   ],
   "usuarios": [
