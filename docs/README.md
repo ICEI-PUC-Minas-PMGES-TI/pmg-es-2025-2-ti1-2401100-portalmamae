@@ -454,8 +454,8 @@ Permite consultar a agenda e acessar agendamentos.
   * depois, escolha a opção Sua Agenda
 * **Tela da funcionalidade**:
 
-![Tela de  Agendamento on-line](/docs\images\siteAgendaGestante.jpeg)
-![Tela de  Agendamento on-line](/docs\images\siteAgendaPrestador.jpeg)
+![Tela de  Agendamento on-line](/docs/images/siteAgendaGestante.jpeg)
+![Tela de  Agendamento on-line](/docs/images/siteAgendaPrestador.jpeg)
 
 ### Funcionalidade 3 - Centralização de informações para gestantes e médicos
 
@@ -521,8 +521,8 @@ realizados e maior organização das informações médicas.
   * Abra o site e efetue o login
 * **Tela da funcionalidade**:
 
-![Tela Portal Gestante](/docs\images\sitePortalGestante.jpeg)
-![Tela Portal Prestador](/docs\images\sitePortalPrestador.jpeg)
+![Tela Portal Gestante](/docs/images/sitePortalGestante.jpeg)
+![Tela Portal Prestador](/docs/images/sitePortalPrestador.jpeg)
 
 ### Funcionalidade 4 - Prontuário médico on-line
 
@@ -550,7 +550,7 @@ Unificação do sistema com todas as informações da gestante.
   * Digite o CPF da gestante
 * **Tela da funcionalidade**:
 
-![Tela de  Prontuário on-line](/docs\images\siteProntuario.jpeg)
+![Tela de  Prontuário on-line](/docs/images/siteProntuario.jpeg)
 
 ### Funcionalidade 5 - Tela de denúncias
 
@@ -575,7 +575,7 @@ Tela para registro de denúncias.
   * Acesse o menu principal e escolha a opção Fazer denúncia
 * **Tela da funcionalidade**:
 
-![Tela de Denúncias](/docs\images\siteDenuncia.png)
+![Tela de Denúncias](/docs/images/siteDenuncia.png)
 
 ### Funcionalidade 6 - Consulta de Exames
 
@@ -623,7 +623,7 @@ Apresentação do quadro médico e resultados de exames da gestante.
   * Acesse o menu principal e escolha a opção Meus Exames
 * **Tela da funcionalidade**:
 
-![Tela Exames](/docs\images\siteExames.png)
+![Tela Exames](/docs/images/siteExames.png)
 
 ## Estruturas de Dados
 
