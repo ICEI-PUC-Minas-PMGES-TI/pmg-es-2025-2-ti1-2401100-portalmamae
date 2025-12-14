@@ -45,6 +45,20 @@
           "acompanhamento": "Sim",
           "nomeMedico": "Andreia",
           "criadoEm": "2025-12-14T18:32:09.405Z"
+        },
+        {
+          "localConsulta": "Upa Unimed Contorno",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Exame",
+          "especialidade": "Raio X",
+          "data": "2025-12-22",
+          "horario": "08:00",
+          "acompanhamento": "Não",
+          "nomeMedico": null,
+          "criadoEm": "2025-12-14T19:20:49.707Z"
         }
       ],
       "quadro_medico": {
@@ -129,6 +143,17 @@
       "exames": "ultrassom",
       "diagnostico": "enxaqueca",
       "dataRegistro": "2025-12-13T21:01:32.056Z"
+    },
+    {
+      "id": "9911",
+      "cpf": "17627000138",
+      "nome": "Rayssa",
+      "idade": "28",
+      "motivo": "Dor abdominal",
+      "historia": "Historico de cancer intestinal na familia",
+      "exames": "Ultrassom",
+      "diagnostico": "Gastrite",
+      "dataRegistro": "2025-12-14T19:31:06.608Z"
     }
   ]
 }
