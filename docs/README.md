@@ -356,9 +356,9 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-[Kaban](/docs/images/kaban.png)
+![Kaban](/docs/images/kaban.png)
 
-[Divisão_de_papéis](/docs/images/docs/images/divisão de funções.png)
+![Divisão_de_papeis] (/docs/images/docs/images/divisão de funções.png)
 
 # Solução Implementada
 
