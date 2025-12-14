@@ -399,7 +399,25 @@ Esta seção apresenta as funcionalidades da solução.Info
 
 Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e deslocamentos desnecessários.
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:**
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+  }
+```
+
 * **Instruções de acesso:**
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Agendar consulta
@@ -411,15 +429,33 @@ Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e 
 
 Permite consultar a agenda e acessar agendamentos.
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:**
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+  }
+```
+
 * **Instruções de acesso:**
   * Abra o site e efetue o login
   * Acesse o menu principal e escolha a opção Agendar consulta
   * depois, escolha a opção Sua Agenda
 * **Tela da funcionalidade**:
 
-![Tela de  Agendamento on-line](/docs\images\siteAgendaGestante.jpeg)
-![Tela de  Agendamento on-line](/docs\images\siteAgendaPrestador.jpeg)
+![Tela de  Agendamento on-line](/docs/images/siteAgendaGestante.jpeg)
+![Tela de  Agendamento on-line](/docs/images/siteAgendaPrestador.jpeg)
 
 ### Funcionalidade 3 - Centralização de informações para gestantes e médicos
 
@@ -485,8 +521,8 @@ realizados e maior organização das informações médicas.
   * Abra o site e efetue o login
 * **Tela da funcionalidade**:
 
-![Tela Portal Gestante](/docs\images\sitePortalGestante.jpeg)
-![Tela Portal Prestador](/docs\images\sitePortalPrestador.jpeg)
+![Tela Portal Gestante](/docs/images/sitePortalGestante.jpeg)
+![Tela Portal Prestador](/docs/images/sitePortalPrestador.jpeg)
 
 ### Funcionalidade 4 - Prontuário médico on-line
 
@@ -514,13 +550,80 @@ Unificação do sistema com todas as informações da gestante.
   * Digite o CPF da gestante
 * **Tela da funcionalidade**:
 
-![Tela de  Prontuário on-line](/docs\images\siteProntuario.jpeg)
+![Tela de  Prontuário on-line](/docs/images/siteProntuario.jpeg)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+### Funcionalidade 5 - Tela de denúncias
+
+Tela para registro de denúncias.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "0237",
+      "cpfGestante": "176.270.001-38",
+      "local": "xyz",
+      "data": "01/12/2025",
+      "anonima": true,
+      "detalhes": "Enfermeira me desrespeitou",
+      "criadaEm": "2025-12-14T17:09:23.630Z"
+  }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Fazer denúncia
+* **Tela da funcionalidade**:
+
+![Tela de Denúncias](/docs/images/siteDenuncia.png)
+
+### Funcionalidade 6 - Consulta de Exames
+
+Apresentação do quadro médico e resultados de exames da gestante.
+
+* **Estrutura de dados:**
+
+```json
+  "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ]
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Meus Exames
+* **Tela da funcionalidade**:
+
+![Tela Exames](/docs/images/siteExames.png)
 
 ## Estruturas de Dados
 
@@ -633,6 +736,27 @@ Registro de prontuário das pacientes.
       "exames": "ultrassom",
       "diagnostico": "enxaqueca",
       "dataRegistro": "2025-12-13T21:01:32.056Z"
+  }
+```
+
+##### Estrutura de Dados - Agendamentos
+
+Registro de Agendamentos.
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
   }
 ```
 
