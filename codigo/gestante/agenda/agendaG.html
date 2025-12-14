@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Consultas e Exames</title>
   <link rel="stylesheet" href="agendaG.css">
 </head>
 <body>
-  <header>
+
+<header class="top-bar">
+  <div class="header-content">
     <h1>Consultas e Exames</h1>
     <nav>
-      <a href="/codigo/agendamento/agendamentos.html">Agendar consulta</a>
       <a href="/codigo/gestante/portalG/portalG.html">Portal Gestante</a>
       <a href="/codigo/home/home.html">Home</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="info">
-      <div class="legenda">
-        <p><span class="dot consulta"></span> Consultas</p>
-        <p><span class="dot exame"></span> Exames</p>
+<main class="main-container">
+
+  <aside class="left-panel">
+    <div class="legend-area">
+      <div class="legend-item">
+        <span class="dot consulta"></span> Consultas
       </div>
-
-      <div class="appointment">
-        <h3>Dia 04/09/2025 às 14:00</h3>
-        <p><strong>UBS :</strong></p>
-        <p>Endereço: Rua alguma coisa, 0000, BH</p>
-        <p>Cep: 00000-000</p>
+      <div class="legend-item">
+        <span class="dot exame"></span> Exames
       </div>
+    </div>
 
-      <div class="appointment">
-        <h3>Dia 15/09/2025 às 14:00</h3>
-        <p><strong>UBS :</strong></p>
-        <p>Endereço: Rua alguma coisa, 0000, BH</p>
-        <p>Cep: 00000-000</p>
-      </div>
+    <hr class="divider">
 
-      <button class="agendar"><a href="/codigo/gestante/agendamento/agendamentos.html" class="agendar">AGENDE AQUI!</a></button>
+    <h3 id="tituloLista">Agenda do Dia</h3>
+    <div id="listaAgendamentos" class="appointments-list">
+      <p>Selecione um dia no calendário</p>
+    </div>
 
-      <p class="note">Nota: O tempo de tolerância para atrasos é de 10 min.</p>
-    </section>
+    <p class="footer-note">
+      Nota: O tempo de tolerância para atrasos é de 10 min.
+    </p>
+    <a href="/codigo/gestante/agendamento/agendamentos.html" class="btn-acessar">Agendar Aqui!</a> 
+  </aside>
 
-    <section class="calendario">
-      <div class="topo-cal">
-        <button id="prev">&lt;</button>
-        <h2 id="tituloMes"></h2>
-        <button id="next">&gt;</button>
-      </div>
+  <section class="calendar-panel">
+    <div class="calendar-header">
+      <button id="prev">&#10094;</button>
+      <h2 id="mesAno"></h2>
+      <button id="next">&#10095;</button>
+    </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>DOMINGO</th>
-            <th>SEGUNDA</th>
-            <th>TERÇA</th>
-            <th>QUARTA</th>
-            <th>QUINTA</th>
-            <th>SEXTA</th>
-            <th>SÁBADO</th>
-          </tr>
-        </thead>
-        <tbody id="diasTabela">
-        </tbody>
-      </table>
-    </section>
-  </main>
+    <div class="weekdays-grid">
+      <div>DOM</div>
+      <div>SEG</div>
+      <div>TER</div>
+      <div>QUA</div>
+      <div>QUI</div>
+      <div>SEX</div>
+      <div>SÁB</div>
+    </div>
 
-  <footer>
-    <p>www.portalmamae.com.br © 2025</p>
-  </footer>
+    <div id="calendarGrid" class="days-grid"></div>
+  </section>
 
-  <script src="agendaG.js"></script>
+</main>
+
+<footer class="bottom-bar">
+  <p>www.portalmamae.com.br © 2025</p>
+</footer>
+
+<script src="agendaG.js"></script>
 </body>
 </html>

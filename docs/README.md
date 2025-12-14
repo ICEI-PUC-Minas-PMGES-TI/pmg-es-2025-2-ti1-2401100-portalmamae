@@ -382,92 +382,399 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+### Funcionalidade 1 - Agendamento on-line de consultas e exames
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite o agendamento de consultas e exames de forma on-line, reduzindo filas e deslocamentos desnecessários.
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:**
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+  }
+```
+
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Acesse o menu principal e escolha a opção Agendar consulta
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de  Agendamento on-line](/docs/images/siteAgendarConsulta.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+### Funcionalidade 2 - Consulta rápida de agendamentos para gestantes e médico
+
+Permite consultar a agenda e acessar agendamentos.
+
+* **Estrutura de dados:**
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+  }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Agendar consulta
+  * depois, escolha a opção Sua Agenda
+* **Tela da funcionalidade**:
+
+![Tela de  Agendamento on-line](/docs/images/siteAgendaGestante.jpeg)
+![Tela de  Agendamento on-line](/docs/images/siteAgendaPrestador.jpeg)
+
+### Funcionalidade 3 - Centralização de informações para gestantes e médicos
+
+Permite praticidade no acompanhamento da gestação, acesso rápido a exames
+realizados e maior organização das informações médicas.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "G00012",
+      "nome_completo": "Rayssa Sthefany dos Santos",
+      "idade": 28,
+      "cpf": "176.270.001-38",
+      "senha": "1010",
+      "telefone": "(31) 99999-1234",
+      "email": "rayssa@gmail.com",
+      "endereco": {
+        "cep": "30130-000",
+        "logradouro": "Avenida Afonso Pena",
+        "numero": "1000",
+        "complemento": "Apto 101",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ]
+    }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+* **Tela da funcionalidade**:
+
+![Tela Portal Gestante](/docs/images/sitePortalGestante.jpeg)
+![Tela Portal Prestador](/docs/images/sitePortalPrestador.jpeg)
+
+### Funcionalidade 4 - Prontuário médico on-line
+
+Unificação do sistema com todas as informações da gestante.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "fadb",
+      "cpf": "22233344455",
+      "nome": "Andreia",
+      "idade": "44",
+      "motivo": "Dores de cabeça",
+      "historia": "A paciente relata dores de cabeça des do inicio do dia",
+      "exames": "ultrassom",
+      "diagnostico": "enxaqueca",
+      "dataRegistro": "2025-12-13T21:01:32.056Z"
+  }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Prontuários e informações
+  * Digite o CPF da gestante
+* **Tela da funcionalidade**:
+
+![Tela de  Prontuário on-line](/docs/images/siteProntuario.jpeg)
+
+### Funcionalidade 5 - Tela de denúncias
+
+Tela para registro de denúncias.
+
+* **Estrutura de dados:**
+
+```json
+  {
+      "id": "0237",
+      "cpfGestante": "176.270.001-38",
+      "local": "xyz",
+      "data": "01/12/2025",
+      "anonima": true,
+      "detalhes": "Enfermeira me desrespeitou",
+      "criadaEm": "2025-12-14T17:09:23.630Z"
+  }
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Fazer denúncia
+* **Tela da funcionalidade**:
+
+![Tela de Denúncias](/docs/images/siteDenuncia.png)
+
+### Funcionalidade 6 - Consulta de Exames
+
+Apresentação do quadro médico e resultados de exames da gestante.
+
+* **Estrutura de dados:**
+
+```json
+  "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ]
+```
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Meus Exames
+* **Tela da funcionalidade**:
+
+![Tela Exames](/docs/images/siteExames.png)
 
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Gestantes
 
-Contatos da aplicação
-
-```json
-  {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
-  
-```
-
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
-
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Gestantes da aplicação
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+      "id": "G00012",
+      "nome_completo": "Rayssa Sthefany dos Santos",
+      "idade": 28,
+      "cpf": "176.270.001-38",
+      "senha": "1010",
+      "telefone": "(31) 99999-1234",
+      "email": "rayssa@gmail.com",
+      "endereco": {
+        "cep": "30130-000",
+        "logradouro": "Avenida Afonso Pena",
+        "numero": "1000",
+        "complemento": "Apto 101",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "quadro_medico": {
+        "portador_doencas_transmissiveis": false,
+        "possui_diabetes": false,
+        "possui_outras_doencas": "nenhuma",
+        "utiliza_medicamentos_controlados": false,
+        "em_tratamento": false,
+        "alergia_a_medicamentos": true,
+        "alergia_detalhe": "Dipirona"
+      },
+      "resultado_exames": [
+        {
+          "id_exame": "E273656",
+          "nome_exame": "Sorologia (Toxoplasmose)",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Sorologia_(Toxoplasmose)_G00012_1762700013872.pdf"
+        },
+        {
+          "id_exame": "E641268",
+          "nome_exame": "Glicemia de Jejum",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Glicemia_de_Jejum_G00012_1762700022063.pdf"
+        },
+        {
+          "id_exame": "E427045",
+          "nome_exame": "Hemograma Completo",
+          "data_exame": "07-11-2025",
+          "status": "Finalizado",
+          "arquivo_url": "http://localhost:3000/arquivos/laudo_Hemograma_Completo_G00012_1762700034710.pdf"
+        }
+      ]
+    }
+```
+
+##### Estrutura de Dados - Médicos
+
+Registro dos médicos do sistema utilizados para login e para o perfil do sistema
+
+```json
+  {
+      "tipo": "medico",
+      "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "cpf": "222.333.444-55",
+      "telefone": "(31) 96666-3333",
+      "login": "Andreia44",
+      "senha": "1234",
+      "nome": "Andreia Silva",
+      "email": "medica@abc.com",
+      "admin": false,
+      "endereco": "Não informado"
   }
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Denúncias
+
+Registro de denúncias do sistema
+
+```json
+  {
+      "id": "0237",
+      "cpfGestante": "176.270.001-38",
+      "local": "xyz",
+      "data": "01/12/2025",
+      "anonima": true,
+      "detalhes": "Enfermeira me desrespeitou",
+      "criadaEm": "2025-12-14T17:09:23.630Z"
+  }
+```
+
+##### Estrutura de Dados - Prontuários
+
+Registro de prontuário das pacientes.
+
+```json
+  {
+      "id": "fadb",
+      "cpf": "22233344455",
+      "nome": "Andreia",
+      "idade": "44",
+      "motivo": "Dores de cabeça",
+      "historia": "A paciente relata dores de cabeça des do inicio do dia",
+      "exames": "ultrassom",
+      "diagnostico": "enxaqueca",
+      "dataRegistro": "2025-12-13T21:01:32.056Z"
+  }
+```
+
+##### Estrutura de Dados - Agendamentos
+
+Registro de Agendamentos.
+
+```json
+  {
+          "localConsulta": "Hospital MaterDay",
+          "uf": "MG",
+          "cidade": "Belo Horizonte",
+          "rua": "Rua dos Eletrotécnicos",
+          "cep": "30840150",
+          "servico": "Consulta",
+          "especialidade": "Obstetra",
+          "data": "2025-12-17",
+          "horario": "14:30",
+          "acompanhamento": "Sim",
+          "nomeMedico": "Andreia",
+          "criadoEm": "2025-12-14T18:05:27.729Z"
+  }
+```
 
 ## Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-**Images**:
+### Frameworks, Bibliotecas e Ambiente:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+* **Node.js** - [https://nodejs.org/](https://nodejs.org/)
+  * Ambiente de execução JavaScript (*runtime*) utilizado no backend para gerenciar a aplicação e executar as dependências do servidor.
 
-**Fonts:**
+* **Bootstrap** - [https://getbootstrap.com/](https://getbootstrap.com/)
+  * Framework CSS utilizado para o desenvolvimento do frontend, garantindo responsividade, sistema de grid e componentes visuais padronizados.
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* **Puppeteer** - [https://pptr.dev/](https://pptr.dev/)
+  * Biblioteca Node.js que fornece uma API de alto nível para controlar o Chrome/Chromium, utilizada nesta solução para a geração automatizada de arquivos PDF.
 
-**Scripts:**
+### APIs
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* **Google Gemini API** - [https://ai.google.dev/](https://ai.google.dev/)
+  * Interface de programação utilizada para integrar recursos de Inteligência Artificial generativa, permitindo a criação de exames.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
+* **YouTube Data API** - [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
+  * API utilizada para acessar a base de dados do YouTube, permitindo a busca e exibição de vídeos e metadados diretamente na interface da solução.
+
+* **Google Maps Platform** - [https://mapsplatform.google.com/](https://mapsplatform.google.com/)
+  * Conjunto de APIs utilizado para incorporar mapas interativos e funcionalidades de geolocalização.
+
+* **ViaCEP** - [https://viacep.com.br/](https://viacep.com.br/)
+  * Web Service (API REST) gratuito utilizado para consultar códigos postais (CEP) e preencher automaticamente os dados de endereço nos formulários.
 
 # Referências
 
