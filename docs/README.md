@@ -369,7 +369,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
-[![Vídeo do projeto](images/video.png)](https://youtu.be/NGMmUW-ro3I)
+[![Vídeo do projeto](https://youtu.be/NGMmUW-ro3I)]
 
 
 ## Funcionalidades
